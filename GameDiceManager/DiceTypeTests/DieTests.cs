@@ -52,5 +52,18 @@ namespace DiceTypeTests
 
             Assert.AreEqual(expectedNumbersOnD12, numbersOnD12);
         }
+
+        [TestMethod]
+        public void D6_Returns4WhenRolled()
+        {
+            var numberOfFaces = 6;
+
+            var d6 = new Die(numberOfFaces);
+            var rollResult = d6.RollDie();
+
+            var expectedResult = 4;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
     }
 }

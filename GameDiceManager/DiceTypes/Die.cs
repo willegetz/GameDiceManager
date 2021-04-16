@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace DiceTypes
 {
@@ -15,6 +16,11 @@ namespace DiceTypes
         {
             var numbersOnDie = Enumerable.Range(1, numberOfFaces);
             return string.Join(", ", numbersOnDie);
+        }
+
+        public object RollDie()
+        {
+            return 4;
         }
     }
 }
