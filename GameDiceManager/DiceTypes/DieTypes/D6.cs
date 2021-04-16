@@ -8,5 +8,10 @@ namespace DiceTypes.DieTypes
         {
             return "D6";
         }
+
+        public string GetFaceNumbers()
+        {
+            return "1, 2, 3, 4, 5, 6";
+        }
     }
 }

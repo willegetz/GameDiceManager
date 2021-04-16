@@ -16,10 +16,20 @@ namespace DiceTypeTests.DieTypes
         public void D6ReportsItsType()
         {
             var d6 = new D6();
-            string dieType = d6.GetDieType();
+            var dieType = d6.GetDieType();
 
             var expectedDieType = "D6";
             Assert.AreEqual(expectedDieType, dieType);
+        }
+
+        [TestMethod]
+        public void D6ReportItsFaceNumbers()
+        {
+            var d6 = new D6();
+            var faceNumbers = d6.GetFaceNumbers();
+
+            var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
+            Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
     }
 }
