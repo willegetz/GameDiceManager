@@ -29,7 +29,10 @@ namespace DiceTypes
             }
             else if (numberOfFaces == 8)
             {
-                return 7;
+                var randomizer = new Random(6);
+                var result = randomizer.Next(1, 9);
+
+                return result;
             }
             else
             {
