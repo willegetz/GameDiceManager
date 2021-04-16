@@ -39,5 +39,18 @@ namespace DiceTypeTests
 
             Assert.AreEqual(expectedNumbersOnD8, numbersOnD8);
         }
+
+        [TestMethod]
+        public void D12_ListsItsNumbers()
+        {
+            var numberOfFaces = 12;
+
+            var d12 = new Die(numberOfFaces);
+            var numbersOnD12 = d12.ListNumbers();
+
+            var expectedNumbersOnD12 = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12";
+
+            Assert.AreEqual(expectedNumbersOnD12, numbersOnD12);
+        }
     }
 }

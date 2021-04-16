@@ -1,4 +1,6 @@
-﻿namespace DiceTypes
+﻿using System.Linq;
+
+namespace DiceTypes
 {
     public class Die
     {
@@ -11,14 +13,8 @@
 
         public string ListNumbers()
         {
-            if (numberOfFaces == 6)
-            {
-                return "1, 2, 3, 4, 5, 6";
-            }
-            else
-            {
-                return "1, 2, 3, 4, 5, 6, 7, 8";
-            }
+            var numbersOnDie = Enumerable.Range(1, numberOfFaces);
+            return string.Join(", ", numbersOnDie);
         }
     }
 }
