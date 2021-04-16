@@ -78,5 +78,18 @@ namespace DiceTypeTests
 
             Assert.AreEqual(expectedResult, rollResult);
         }
+
+        [TestMethod]
+        public void D12_Returns11WhenRolled()
+        {
+            var numberOfFaces = 12;
+
+            var d12 = new Die(numberOfFaces);
+            var rollResult = d12.RollDie();
+
+            var expectedResult = 11;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
     }
 }

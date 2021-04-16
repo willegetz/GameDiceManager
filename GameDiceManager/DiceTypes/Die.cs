@@ -20,12 +20,17 @@ namespace DiceTypes
 
         public int RollDie()
         {
-            if(numberOfFaces == 6)
+            if (numberOfFaces == 6)
             {
                 return 4;
-            } else
+            }
+            else if (numberOfFaces == 8)
             {
                 return 7;
+            }
+            else
+            {
+                return 11;
             }
         }
     }
