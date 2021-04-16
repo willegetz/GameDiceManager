@@ -49,8 +49,9 @@ namespace DiceTypeTests
         public void D6_Returns4WhenRolled()
         {
             var numberOfFaces = 6;
+            var randomSeed = 13;
 
-            var d6 = new Die(numberOfFaces);
+            var d6 = new Die(numberOfFaces, randomSeed);
             var rollResult = d6.RollDie();
 
             var expectedResult = 4;
