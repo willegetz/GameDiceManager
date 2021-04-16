@@ -36,7 +36,7 @@ namespace DiceTypes
             }
             else if (numberOfFaces == 8)
             {
-                var randomizer = new Random(6);
+                var randomizer = new Random(randomSeed);
                 var result = randomizer.Next(1, ExcludedUpperBound);
 
                 return result;

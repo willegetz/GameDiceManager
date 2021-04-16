@@ -63,8 +63,9 @@ namespace DiceTypeTests
         public void D8_Returns7WhenRolled()
         {
             var numberOfFaces = 8;
+            var randomSeed = 6;
 
-            var d8 = new Die(numberOfFaces);
+            var d8 = new Die(numberOfFaces, randomSeed);
             var rollResult = d8.RollDie();
 
             var expectedResult = 7;
