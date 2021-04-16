@@ -77,8 +77,9 @@ namespace DiceTypeTests
         public void D12_Returns11WhenRolled()
         {
             var numberOfFaces = 12;
+            var randomSeed = 6;
 
-            var d12 = new Die(numberOfFaces);
+            var d12 = new Die(numberOfFaces, randomSeed);
             var rollResult = d12.RollDie();
 
             var expectedResult = 11;
