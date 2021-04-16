@@ -14,10 +14,6 @@ namespace DiceTypes
             this.numberOfFaces = numberOfFaces;
             this.randomSeed = randomSeed;
         }
-        public Die(int numberOfFaces)
-        {
-            this.numberOfFaces = numberOfFaces;
-        }
 
         public string ListNumbers()
         {
@@ -27,27 +23,10 @@ namespace DiceTypes
 
         public int RollDie()
         {
-            if (numberOfFaces == 6)
-            {
-                var randomizer = new Random(randomSeed);
-                var result = randomizer.Next(1, ExcludedUpperBound);
+            var randomizer = new Random(randomSeed);
+            var result = randomizer.Next(1, ExcludedUpperBound);
 
-                return result;
-            }
-            else if (numberOfFaces == 8)
-            {
-                var randomizer = new Random(randomSeed);
-                var result = randomizer.Next(1, ExcludedUpperBound);
-
-                return result;
-            }
-            else
-            {
-                var randomizer = new Random(randomSeed);
-                var result = randomizer.Next(1, ExcludedUpperBound);
-
-                return result;
-            }
+            return result;
         }
     }
 }

@@ -10,8 +10,9 @@ namespace DiceTypeTests
         public void D6_ListsItsNumbers()
         {
             var numberOfFaces = 6;
+            var randomSeed = 13;
 
-            var d6 = new Die(numberOfFaces);
+            var d6 = new Die(numberOfFaces, randomSeed);
             var numbersOnD6 = d6.ListNumbers();
 
             var expectedNumbers = "1, 2, 3, 4, 5, 6";
@@ -23,8 +24,9 @@ namespace DiceTypeTests
         public void D8_ListsItsNumbers()
         {
             var numberOfFaces = 8;
+            var randomSeed = 6;
 
-            var d8 = new Die(numberOfFaces);
+            var d8 = new Die(numberOfFaces, randomSeed);
             var numbersOnD8 = d8.ListNumbers();
 
             var expectedNumbersOnD8 = "1, 2, 3, 4, 5, 6, 7, 8";
@@ -36,8 +38,9 @@ namespace DiceTypeTests
         public void D12_ListsItsNumbers()
         {
             var numberOfFaces = 12;
+            var randomSeed = 6;
 
-            var d12 = new Die(numberOfFaces);
+            var d12 = new Die(numberOfFaces, randomSeed);
             var numbersOnD12 = d12.ListNumbers();
 
             var expectedNumbersOnD12 = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12";
