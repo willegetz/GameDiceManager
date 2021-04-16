@@ -7,13 +7,8 @@ namespace DiceTypeTests.DieTypes
     [TestClass]
     public class D6Tests
     {
-        // x The D6 type can tell you it is a D6.
-        // The D6 has all the functionality of a die with the same number of faces
-        // The D6 is random when it is "picked up"
-        // Can the D6 inform us on other things?
-
         [TestMethod]
-        public void D6ReportsItsType()
+        public void ReportsItsType()
         {
             var d6 = new D6(13);
             var dieType = d6.GetDieType();
@@ -23,13 +18,26 @@ namespace DiceTypeTests.DieTypes
         }
 
         [TestMethod]
-        public void D6ReportItsFaceNumbers()
+        public void ReportItsFaceNumbers()
         {
             var d6 = new D6(13);
             var faceNumbers = d6.GetFaceNumbers();
 
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
+        }
+
+        [TestMethod]
+        public void Returns4WhenRolled()
+        {
+            var randomSeed = 13;
+
+            var d6 = new D6(randomSeed);
+            var rollResult = d6.RollDie();
+
+            var expectedResult = 4;
+
+            Assert.AreEqual(expectedResult, rollResult);
         }
     }
 }

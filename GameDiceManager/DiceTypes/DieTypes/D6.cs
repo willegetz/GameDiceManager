@@ -19,5 +19,10 @@ namespace DiceTypes.DieTypes
         {
             return _d6.ListFaceNumbers();
         }
+
+        public object RollDie()
+        {
+            return _d6.RollDie();
+        }
     }
 }
