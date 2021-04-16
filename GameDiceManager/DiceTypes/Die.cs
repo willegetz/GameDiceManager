@@ -6,6 +6,7 @@ namespace DiceTypes
     public class Die
     {
         private int numberOfFaces;
+        private int ExcludedUpperBound { get { return numberOfFaces + 1; } }
 
         public Die(int numberOfFaces)
         {
@@ -23,21 +24,21 @@ namespace DiceTypes
             if (numberOfFaces == 6)
             {
                 var randomizer = new Random(13);
-                var result = randomizer.Next(1, 7);
+                var result = randomizer.Next(1, ExcludedUpperBound);
 
                 return result;
             }
             else if (numberOfFaces == 8)
             {
                 var randomizer = new Random(6);
-                var result = randomizer.Next(1, 9);
+                var result = randomizer.Next(1, ExcludedUpperBound);
 
                 return result;
             }
             else
             {
                 var randomizer = new Random(6);
-                var result = randomizer.Next(1, 13);
+                var result = randomizer.Next(1, ExcludedUpperBound);
 
                 return result;
             }

@@ -9,14 +9,6 @@ namespace DiceTypeTests
         [TestMethod]
         public void D6_ListsItsNumbers()
         {
-            // A six sided die contains numbers from 1 to 6
-            // A person can pick up the die and see all the numbers
-            //  by rotating it in their hand
-
-            // Assume the die can contain any number of faces.
-            // When creating the die we need to specify the number of faces akin to when
-            //  we look for a specific die.
-
             var numberOfFaces = 6;
 
             var d6 = new Die(numberOfFaces);
