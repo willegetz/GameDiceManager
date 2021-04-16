@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DiceTypeTests
 {
     [TestClass]
-    public class D6Tests
+    public class DieTests
     {
         [TestMethod]
-        public void D6_ListItsNumbers()
+        public void D6_ListsItsNumbers()
         {
             // A six sided die contains numbers from 1 to 6
             // A person can pick up the die and see all the numbers
@@ -20,12 +20,24 @@ namespace DiceTypeTests
             var numberOfFaces = 6;
 
             var d6 = new Die(numberOfFaces);
-
             var numbersOnD6 = d6.ListNumbers();
 
             var expectedNumbers = "1, 2, 3, 4, 5, 6";
 
             Assert.AreEqual(expectedNumbers, numbersOnD6);
+        }
+
+        [TestMethod]
+        public void D8_ListsItsNumbers()
+        {
+            var numberOfFaces = 8;
+
+            var d8 = new Die(numberOfFaces);
+            var numbersOnD8 = d8.ListNumbers();
+
+            var expectedNumbersOnD8 = "1, 2, 3, 4, 5, 6, 7, 8";
+
+            Assert.AreEqual(expectedNumbersOnD8, numbersOnD8);
         }
     }
 }

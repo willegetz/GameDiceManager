@@ -11,7 +11,14 @@
 
         public string ListNumbers()
         {
-            return "1, 2, 3, 4, 5, 6";
+            if (numberOfFaces == 6)
+            {
+                return "1, 2, 3, 4, 5, 6";
+            }
+            else
+            {
+                return "1, 2, 3, 4, 5, 6, 7, 8";
+            }
         }
     }
 }
