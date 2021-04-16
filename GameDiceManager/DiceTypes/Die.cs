@@ -22,7 +22,10 @@ namespace DiceTypes
         {
             if (numberOfFaces == 6)
             {
-                return 4;
+                var randomizer = new Random(13);
+                var result = randomizer.Next(1, 7);
+
+                return result;
             }
             else if (numberOfFaces == 8)
             {
