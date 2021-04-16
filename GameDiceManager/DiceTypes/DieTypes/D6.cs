@@ -2,11 +2,12 @@
 
 namespace DiceTypes.DieTypes
 {
-    public class D6 : Die
+    public class D6
     {
-        public D6(int randomSeed) : base(6, randomSeed)
+        private readonly Die _d6;
+        public D6(int randomSeed)
         {
-
+            _d6 = new Die(6, randomSeed);
         }
 
         public string GetDieType()
@@ -16,7 +17,7 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            return base.ListNumbers();
+            return _d6.ListFaceNumbers();
         }
     }
 }

@@ -26,7 +26,7 @@ namespace DiceTypeTests.DieTypes
         public void D6ReportItsFaceNumbers()
         {
             var d6 = new D6(13);
-            var faceNumbers = d6.ListNumbers();
+            var faceNumbers = d6.GetFaceNumbers();
 
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);

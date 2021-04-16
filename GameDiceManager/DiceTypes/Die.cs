@@ -15,7 +15,7 @@ namespace DiceTypes
             this.randomSeed = randomSeed;
         }
 
-        public string ListNumbers()
+        public string ListFaceNumbers()
         {
             var numbersOnDie = Enumerable.Range(1, numberOfFaces);
             return string.Join(", ", numbersOnDie);
