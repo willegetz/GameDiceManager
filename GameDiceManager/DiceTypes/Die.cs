@@ -18,9 +18,15 @@ namespace DiceTypes
             return string.Join(", ", numbersOnDie);
         }
 
-        public object RollDie()
+        public int RollDie()
         {
-            return 4;
+            if(numberOfFaces == 6)
+            {
+                return 4;
+            } else
+            {
+                return 7;
+            }
         }
     }
 }
