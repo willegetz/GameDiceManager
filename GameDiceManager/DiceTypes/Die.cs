@@ -36,7 +36,10 @@ namespace DiceTypes
             }
             else
             {
-                return 11;
+                var randomizer = new Random(6);
+                var result = randomizer.Next(1, 13);
+
+                return result;
             }
         }
     }
