@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DiceTypes.DieTypes
 {
@@ -19,6 +20,11 @@ namespace DiceTypes.DieTypes
         public string GetFaceNumbers()
         {
             return _d10.ListFaceNumbers();
+        }
+
+        public int RollDie()
+        {
+            return _d10.RollDie();
         }
     }
 }
