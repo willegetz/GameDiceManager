@@ -52,6 +52,7 @@
     <Compile Include="DieTests.cs" />
     <Compile Include="DieTypes\D10Tests.cs" />
     <Compile Include="DieTypes\D6Tests.cs" />
+    <Compile Include="DieTypes\DPercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
