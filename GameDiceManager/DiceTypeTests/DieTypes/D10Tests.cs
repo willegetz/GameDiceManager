@@ -15,5 +15,15 @@ namespace DiceTypeTests.DieTypes
             var expectedDieType = "D10";
             Assert.AreEqual(expectedDieType, dieType);
         }
+
+        [TestMethod]
+        public void ReportItsFaceNumbers()
+        {
+            var d10 = new D10(0);
+            string faceNumbers = d10.GetFaceNumbers();
+
+            var expectedFaceNumbers = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10";
+            Assert.AreEqual(expectedFaceNumbers, faceNumbers);
+        }
     }
 }

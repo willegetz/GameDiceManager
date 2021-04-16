@@ -1,4 +1,6 @@
-﻿namespace DiceTypes.DieTypes
+﻿using System;
+
+namespace DiceTypes.DieTypes
 {
     public class D10
     {
@@ -12,6 +14,11 @@
         public string GetDieType()
         {
             return "D10";
+        }
+
+        public string GetFaceNumbers()
+        {
+            return _d10.ListFaceNumbers();
         }
     }
 }
