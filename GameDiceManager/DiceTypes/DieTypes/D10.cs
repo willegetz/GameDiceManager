@@ -26,5 +26,11 @@ namespace DiceTypes.DieTypes
         {
             return _d10.RollDie();
         }
+
+        public void ShiftRangeDownByOne()
+        {
+            var rangeShiftValue = -1;
+            _d10.ShiftRange(rangeShiftValue);
+        }
     }
 }

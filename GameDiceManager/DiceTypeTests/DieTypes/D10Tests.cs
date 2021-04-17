@@ -38,5 +38,17 @@ namespace DiceTypeTests.DieTypes
 
             Assert.AreEqual(expectedResult, rollResult);
         }
+
+        [TestMethod]
+        public void ShiftByNegativeOneListsFaceValuesAppropriately()
+        {
+            var d10 = new D10(0);
+            d10.ShiftRangeDownByOne();
+
+            var faceNumbers = d10.GetFaceNumbers();
+
+            var expectedFaceNumbers = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
+            Assert.AreEqual(expectedFaceNumbers, faceNumbers);
+        }
     }
 }
