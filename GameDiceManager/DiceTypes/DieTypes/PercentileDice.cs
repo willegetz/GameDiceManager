@@ -10,7 +10,8 @@ namespace DiceTypes.DieTypes
         public PercentileDice()
         {
             _tensDie = new Die(10, 5);
-            _onesDie = new Die(10, 0);
+            _onesDie = new Die(10, 4);
+            _onesDie.ShiftRange(-1);
         }
 
         public string GetDieType()
@@ -30,6 +31,7 @@ namespace DiceTypes.DieTypes
         {
             var tensResult = _tensDie.RollDie();
             var onesResult = _onesDie.RollDie();
+
             var result = Convert.ToInt32($"{tensResult}{onesResult}");
 
             return result;
