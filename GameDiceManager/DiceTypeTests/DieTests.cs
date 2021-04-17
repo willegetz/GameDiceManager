@@ -89,5 +89,22 @@ namespace DiceTypeTests
 
             Assert.AreEqual(expectedResult, rollResult);
         }
+
+        [TestMethod]
+        public void D6_ShiftsRangeByOneWhenToldTo()
+        {
+            var numberOfFaces = 6;
+            var randomSeed = 0;
+            var rangeShiftValue = 1;
+
+            var shiftedD6 = new Die(numberOfFaces, randomSeed);
+            shiftedD6.ShiftRange(rangeShiftValue);
+
+            var numbersOnShiftedD6 = shiftedD6.ListFaceNumbers();
+
+            var expectedNumbersOnShiftedD6 = "2, 3, 4, 5, 6, 7";
+
+            Assert.AreEqual(expectedNumbersOnShiftedD6, numbersOnShiftedD6);
+        }
     }
 }

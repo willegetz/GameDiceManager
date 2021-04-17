@@ -7,7 +7,10 @@ namespace DiceTypes
     {
         private int numberOfFaces;
         private int randomSeed;
-        private int ExcludedUpperBound { get { return numberOfFaces + 1; } }
+
+        private int _rangeShiftValue = 0;
+        private int ExclusiveUpperBound { get { return (numberOfFaces + 1) + _rangeShiftValue; } }
+        private int InclusiveLowerBound { get { return 1 + _rangeShiftValue; } }
 
         public Die(int numberOfFaces, int randomSeed)
         {
@@ -17,16 +20,21 @@ namespace DiceTypes
 
         public string ListFaceNumbers()
         {
-            var numbersOnDie = Enumerable.Range(1, numberOfFaces);
+            var numbersOnDie = Enumerable.Range(InclusiveLowerBound, numberOfFaces);
             return string.Join(", ", numbersOnDie);
         }
 
         public int RollDie()
         {
             var randomizer = new Random(randomSeed);
-            var result = randomizer.Next(1, ExcludedUpperBound);
+            var result = randomizer.Next(InclusiveLowerBound, ExclusiveUpperBound);
 
             return result;
+        }
+
+        public void ShiftRange(int rangeShiftValue)
+        {
+            _rangeShiftValue = rangeShiftValue;
         }
     }
 }
