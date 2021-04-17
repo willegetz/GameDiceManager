@@ -7,10 +7,10 @@ namespace DiceTypes.DieTypes
         private Die _tensDie;
         private Die _onesDie;
 
-        public PercentileDice()
+        public PercentileDice(int tensSeed, int onesSeed)
         {
-            _tensDie = new Die(10, 5);
-            _onesDie = new Die(10, 4);
+            _tensDie = new Die(10, tensSeed);
+            _onesDie = new Die(10, onesSeed);
             _onesDie.ShiftRange(-1);
         }
 
