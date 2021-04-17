@@ -5,10 +5,12 @@ namespace DiceTypes.DieTypes
     public class PercentileDice
     {
         private Die _tensDie;
+        private Die _onesDie;
 
         public PercentileDice()
         {
             _tensDie = new Die(10, 5);
+            _onesDie = new Die(10, 0);
         }
 
         public string GetDieType()
@@ -19,14 +21,16 @@ namespace DiceTypes.DieTypes
         public string GetFaceNumbers()
         {
             var tensFaceNumbers = $"Tens Die: {_tensDie.ListFaceNumbers()}";
+            var onesFaceNumbers = $"Ones Die: {_onesDie.ListFaceNumbers()}";
             return $@"{tensFaceNumbers}
-Ones Die: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
+{onesFaceNumbers}";
         }
 
         public int RollDice()
         {
             var tensResult = _tensDie.RollDie();
-            var result = Convert.ToInt32($"{tensResult}8");
+            var onesResult = _onesDie.RollDie();
+            var result = Convert.ToInt32($"{tensResult}{onesResult}");
 
             return result;
         }

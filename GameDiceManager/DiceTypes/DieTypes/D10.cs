@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace DiceTypes.DieTypes
+﻿namespace DiceTypes.DieTypes
 {
     public class D10
     {

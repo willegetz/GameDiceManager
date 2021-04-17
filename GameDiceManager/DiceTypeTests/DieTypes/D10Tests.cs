@@ -50,5 +50,20 @@ namespace DiceTypeTests.DieTypes
             var expectedFaceNumbers = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
+
+        [TestMethod]
+        public void OnesDieReturns0WhenRolled()
+        {
+            var randomSeed = 14;
+
+            var d10OnesDie = new D10(randomSeed);
+            d10OnesDie.MakeOnesDie();
+
+            int rollResult = d10OnesDie.RollDie();
+
+            var expectedResult = 0;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
     }
 }
