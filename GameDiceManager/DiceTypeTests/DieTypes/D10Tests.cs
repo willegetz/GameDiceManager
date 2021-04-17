@@ -40,10 +40,10 @@ namespace DiceTypeTests.DieTypes
         }
 
         [TestMethod]
-        public void ShiftByNegativeOneListsFaceValuesAppropriately()
+        public void MakeOnesDieReportsItsNewFaceNumbers()
         {
             var d10 = new D10(0);
-            d10.ShiftRangeDownByOne();
+            d10.MakeOnesDie();
 
             var faceNumbers = d10.GetFaceNumbers();
 
