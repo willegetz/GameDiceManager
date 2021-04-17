@@ -40,5 +40,15 @@ Ones Die: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
 
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
+
+        [TestMethod]
+        public void Returns48WhenRolled()
+        {
+            var percentile = new PercentileDice();
+            var result = percentile.RollDice();
+
+            var expectedResult = 48;
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
