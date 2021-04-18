@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DieTests.cs" />
     <Compile Include="DieTypes\D10Tests.cs" />
+    <Compile Include="DieTypes\D3TypeATests.cs" />
     <Compile Include="DieTypes\D66Tests.cs" />
     <Compile Include="DieTypes\D6Tests.cs" />
     <Compile Include="DieTypes\PercentileDiceTests.cs" />
