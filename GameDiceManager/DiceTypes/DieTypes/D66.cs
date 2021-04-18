@@ -11,7 +11,7 @@ namespace DiceTypes.DieTypes
         public D66()
         {
             _tensDie = new Die(6, 6);
-            _onesDie = new Die(6, 0);
+            _onesDie = new Die(6, 14);
         }
 
         public string GetDieType()
@@ -31,8 +31,9 @@ Ones Die: {onesFaces}";
         public int RollDie()
         {
             var tensResult = _tensDie.RollDie();
+            var onesResult = _onesDie.RollDie();
 
-            var result = Convert.ToInt32($"{tensResult}1");
+            var result = Convert.ToInt32($"{tensResult}{onesResult}");
             return result;
         }
     }
