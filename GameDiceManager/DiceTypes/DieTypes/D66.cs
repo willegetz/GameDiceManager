@@ -8,5 +8,11 @@ namespace DiceTypes.DieTypes
         {
             return "D66 (2D6)";
         }
+
+        public string GetFaceNumbers()
+        {
+            return @"Tens Die: 1, 2, 3, 4, 5, 6
+Ones Die: 1, 2, 3, 4, 5, 6";
+        }
     }
 }
