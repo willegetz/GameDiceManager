@@ -10,7 +10,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportsItsType()
         {
-            var d66 = new D66();
+            var d66 = new D66(0);
             var dieType = d66.GetDieType();
 
             var expectedDieType = "D66 (2D6)";
@@ -21,7 +21,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportItsFaceNumbers()
         {
-            var d66 = new D66();
+            var d66 = new D66(0);
             var faceNumbers = d66.GetFaceNumbers();
 
             var expectedFaceNumbers = @"Tens Die: 1, 2, 3, 4, 5, 6
@@ -33,7 +33,9 @@ Ones Die: 1, 2, 3, 4, 5, 6";
         [TestMethod]
         public void Returns61WhenRolled()
         {
-            var d66 = new D66();
+            var tensSeed = 6;
+
+            var d66 = new D66(tensSeed);
             var result = d66.RollDie();
 
             var expectedResult = 61;
