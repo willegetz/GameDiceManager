@@ -8,10 +8,10 @@ namespace DiceTypes.DieTypes
         private Die _tensDie;
         private Die _onesDie;
 
-        public D66(int tensSeed)
+        public D66(int tensSeed, int onesSeed)
         {
             _tensDie = new Die(6, tensSeed);
-            _onesDie = new Die(6, 14);
+            _onesDie = new Die(6, onesSeed);
         }
 
         public string GetDieType()
