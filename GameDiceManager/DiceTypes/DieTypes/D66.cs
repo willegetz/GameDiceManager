@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DiceTypes.DieTypes
 {
@@ -9,7 +10,7 @@ namespace DiceTypes.DieTypes
 
         public D66()
         {
-            _tensDie = new Die(6, 0);
+            _tensDie = new Die(6, 6);
             _onesDie = new Die(6, 0);
         }
 
@@ -29,7 +30,10 @@ Ones Die: {onesFaces}";
 
         public int RollDie()
         {
-            return 61;
+            var tensResult = _tensDie.RollDie();
+
+            var result = Convert.ToInt32($"{tensResult}1");
+            return result;
         }
     }
 }
