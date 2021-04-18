@@ -4,6 +4,12 @@ namespace DiceTypes.DieTypes
 {
     public class D3TypeA
     {
+        private Die _d6;
+
+        public D3TypeA()
+        {
+            _d6 = new Die(6, 0);
+        }
         public string GetDieType()
         {
             return "D3 Type A (D6 result / 2 rounded up)";
@@ -11,7 +17,7 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            return "1, 2, 3, 4, 5, 6";
+            return _d6.ListFaceNumbers();
         }
 
         public int RollDie()
