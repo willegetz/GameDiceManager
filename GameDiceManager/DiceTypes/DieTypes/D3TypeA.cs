@@ -9,7 +9,7 @@ namespace DiceTypes.DieTypes
             return "D3 Type A (D6 result / 2 rounded up)";
         }
 
-        public static object GetFaceNumbers()
+        public string GetFaceNumbers()
         {
             return "1, 2, 3, 4, 5, 6";
         }
