@@ -14,5 +14,10 @@ namespace DiceTypes.DieTypes
             return @"Tens Die: 1, 2, 3, 4, 5, 6
 Ones Die: 1, 2, 3, 4, 5, 6";
         }
+
+        public int RollDie()
+        {
+            return 61;
+        }
     }
 }
