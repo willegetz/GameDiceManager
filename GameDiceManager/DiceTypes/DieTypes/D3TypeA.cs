@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DiceTypes.DieTypes
 {
@@ -22,7 +23,12 @@ namespace DiceTypes.DieTypes
 
         public int RollDie()
         {
-            return 3;
+            var d6Result = _d6.RollDie();
+            var d3Result = d6Result / 2.0;
+
+            var result = Math.Ceiling(d3Result);
+
+            return Convert.ToInt32(result);
         }
     }
 }
