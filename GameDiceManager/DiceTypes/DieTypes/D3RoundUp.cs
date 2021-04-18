@@ -3,17 +3,17 @@ using System.Linq;
 
 namespace DiceTypes.DieTypes
 {
-    public class D3TypeA
+    public class D3RoundUp
     {
         private Die _d6;
 
-        public D3TypeA(int seed)
+        public D3RoundUp(int seed)
         {
             _d6 = new Die(6, seed);
         }
         public string GetDieType()
         {
-            return "D3 Type A (D6 result / 2 rounded up)";
+            return "D3 Round Up (D6 result / 2 rounded up)";
         }
 
         public string GetFaceNumbers()

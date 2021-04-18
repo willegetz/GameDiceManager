@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Die.cs" />
     <Compile Include="DieTypes\D10.cs" />
-    <Compile Include="DieTypes\D3TypeA.cs" />
+    <Compile Include="DieTypes\D3RoundUp.cs" />
     <Compile Include="DieTypes\D6.cs" />
     <Compile Include="DieTypes\D66.cs" />
     <Compile Include="DieTypes\PercentileDice.cs" />

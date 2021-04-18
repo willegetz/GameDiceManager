@@ -6,22 +6,22 @@ using System.Linq;
 namespace DiceTypeTests.DieTypes
 {
     [TestClass]
-    public class D3TypeATests
+    public class D3RoundUpTests
     {
         [TestMethod]
         public void ReportsItsType()
         {
-            var d3TypeA = new D3TypeA(0);
+            var d3TypeA = new D3RoundUp(0);
             var dieType = d3TypeA.GetDieType();
 
-            var expectedDieType = "D3 Type A (D6 result / 2 rounded up)";
+            var expectedDieType = "D3 Round Up (D6 result / 2 rounded up)";
             Assert.AreEqual(expectedDieType, dieType);
         }
 
         [TestMethod]
         public void ReportsItsFaces()
         {
-            var d3TypeA = new D3TypeA(0);
+            var d3TypeA = new D3RoundUp(0);
             var faceNumbers = d3TypeA.GetFaceNumbers();
 
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
@@ -31,7 +31,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void Returns3When5IsRolled()
         {
-            var d3TypeA = new D3TypeA(0);
+            var d3TypeA = new D3RoundUp(0);
             var result = d3TypeA.RollDie();
 
             var expectedResult = 3;
@@ -41,7 +41,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void Returns2When3IsRolled()
         {
-            var d3TypeA = new D3TypeA(5);
+            var d3TypeA = new D3RoundUp(5);
             var result = d3TypeA.RollDie();
 
             var expectedResult = 2;
@@ -51,7 +51,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void Returns1When1IsRolled()
         {
-            var d3TypeA = new D3TypeA(14);
+            var d3TypeA = new D3RoundUp(14);
             var result = d3TypeA.RollDie();
 
             var expectedResult = 1;
