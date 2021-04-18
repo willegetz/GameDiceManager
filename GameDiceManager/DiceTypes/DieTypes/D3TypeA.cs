@@ -7,9 +7,9 @@ namespace DiceTypes.DieTypes
     {
         private Die _d6;
 
-        public D3TypeA()
+        public D3TypeA(int seed)
         {
-            _d6 = new Die(6, 0);
+            _d6 = new Die(6, seed);
         }
         public string GetDieType()
         {
