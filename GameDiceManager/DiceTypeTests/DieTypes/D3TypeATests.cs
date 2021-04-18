@@ -26,5 +26,15 @@ namespace DiceTypeTests.DieTypes
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
+
+        [TestMethod]
+        public void Returns3When5IsRolled()
+        {
+            var d3TypeA = new D3TypeA();
+            var result = d3TypeA.RollDie();
+
+            var expectedResult = 3;
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }

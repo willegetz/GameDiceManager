@@ -13,5 +13,10 @@ namespace DiceTypes.DieTypes
         {
             return "1, 2, 3, 4, 5, 6";
         }
+
+        public int RollDie()
+        {
+            return 3;
+        }
     }
 }
