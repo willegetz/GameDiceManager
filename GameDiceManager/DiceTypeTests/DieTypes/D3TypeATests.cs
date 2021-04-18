@@ -47,5 +47,15 @@ namespace DiceTypeTests.DieTypes
             var expectedResult = 2;
             Assert.AreEqual(expectedResult, result);
         }
+
+        [TestMethod]
+        public void Returns1When1IsRolled()
+        {
+            var d3TypeA = new D3TypeA(14);
+            var result = d3TypeA.RollDie();
+
+            var expectedResult = 1;
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
