@@ -11,10 +11,10 @@ namespace DiceTypes.DieTypes
         private Die _d8;
         private Die _d6;
 
-        public D16(int randomSeed)
+        public D16(int d8RandomSeed, int d6RandomSeed)
         {
-            _d8 = new Die(8, randomSeed);
-            _d6 = new Die(6, randomSeed);
+            _d8 = new Die(8, d8RandomSeed);
+            _d6 = new Die(6, d6RandomSeed);
         }
 
         public string GetDieType()
@@ -31,9 +31,11 @@ D6: {_d6.ListFaceNumbers()}";
         public int RollDie()
         {
             var d8Result = _d8.RollDie();
+            var d6Result = _d6.RollDie();
+
             int d16Result;
 
-            if (d8Result == 4)
+            if (d6Result <= 3)
             {
                 d16Result = d8Result;
             }
