@@ -35,7 +35,7 @@ D6: {_d6.ListFaceNumbers()}";
 
             int d16Result;
 
-            if (d6Result <= 3)
+            if (d6Result >= 3)
             {
                 d16Result = d8Result;
             }
