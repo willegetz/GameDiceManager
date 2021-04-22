@@ -30,7 +30,8 @@ D6: {_d6.ListFaceNumbers()}";
 
         public int RollDie()
         {
-            return 4;
+            var d8Result = _d8.RollDie();
+            return d8Result;
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using DiceTypes.DieTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Linq;
 
 namespace DiceTypeTests.DieTypes
 {
@@ -37,7 +39,7 @@ D6: 1, 2, 3, 4, 5, 6";
         [TestMethod]
         public void Returns4WhenRolled()
         {
-            var randomSeed = 0;
+            var randomSeed = 11;
 
             var d16 = new D16(randomSeed);
             var rollResult = d16.RollDie();
