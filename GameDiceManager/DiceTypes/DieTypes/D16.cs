@@ -20,7 +20,8 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            return "";
+            return @"D8: 1, 2, 3, 4, 5, 6, 7, 9
+D6: 1, 2, 3, 4, 5, 6";
         }
 
         public int RollDice()

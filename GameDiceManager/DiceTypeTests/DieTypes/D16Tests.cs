@@ -21,7 +21,17 @@ namespace DiceTypeTests.DieTypes
             var expectedDieType = "D16";
 
             Assert.AreEqual(expectedDieType, dieType);
+        }
 
+        [TestMethod]
+        public void ReportItsFaceNumbers()
+        {
+            var d16 = new D16();
+            var faceNumbers = d16.GetFaceNumbers();
+
+            var expectedFaceNumbers = @"D8: 1, 2, 3, 4, 5, 6, 7, 9
+D6: 1, 2, 3, 4, 5, 6";
+            Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
     }
 }
