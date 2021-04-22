@@ -8,9 +8,13 @@ namespace DiceTypes.DieTypes
 {
     public class D16
     {
+        private Die _d8;
+        private Die _d6;
+
         public D16(int randomSeed)
         {
-
+            _d8 = new Die(8, randomSeed);
+            _d6 = new Die(6, randomSeed);
         }
 
         public string GetDieType()
@@ -20,8 +24,8 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            return @"D8: 1, 2, 3, 4, 5, 6, 7, 9
-D6: 1, 2, 3, 4, 5, 6";
+            return $@"D8: {_d8.ListFaceNumbers()}
+D6: {_d6.ListFaceNumbers()}";
         }
 
         public int RollDie()
