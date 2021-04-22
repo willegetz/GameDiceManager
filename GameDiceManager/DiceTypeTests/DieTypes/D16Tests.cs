@@ -15,7 +15,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportsItsType()
         {
-            var d16 = new D16();
+            var d16 = new D16(0);
             var dieType = d16.GetDieType();
 
             var expectedDieType = "D16";
@@ -26,12 +26,25 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportItsFaceNumbers()
         {
-            var d16 = new D16();
+            var d16 = new D16(0);
             var faceNumbers = d16.GetFaceNumbers();
 
             var expectedFaceNumbers = @"D8: 1, 2, 3, 4, 5, 6, 7, 9
 D6: 1, 2, 3, 4, 5, 6";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
+        }
+
+        [TestMethod]
+        public void Returns4WhenRolled()
+        {
+            var randomSeed = 0;
+
+            var d16 = new D16(randomSeed);
+            var rollResult = d16.RollDie();
+
+            var expectedResult = 4;
+
+            Assert.AreEqual(expectedResult, rollResult);
         }
     }
 }

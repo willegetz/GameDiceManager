@@ -8,7 +8,7 @@ namespace DiceTypes.DieTypes
 {
     public class D16
     {
-        public D16()
+        public D16(int randomSeed)
         {
 
         }
@@ -24,9 +24,9 @@ namespace DiceTypes.DieTypes
 D6: 1, 2, 3, 4, 5, 6";
         }
 
-        public int RollDice()
+        public int RollDie()
         {
-            return -1;
+            return 4;
         }
     }
 }
