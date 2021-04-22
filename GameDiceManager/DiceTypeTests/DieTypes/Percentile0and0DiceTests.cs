@@ -7,21 +7,10 @@ namespace DiceTypeTests.DieTypes
     [TestClass]
     public class Percentile0and0DiceTests
     {
-        // The percentile dice are two D10s
-        //  The faces on the first D10 (the tens) number 1 to 10
-        //  The faces on the second D10 (the ones) number 0 to 9
-        // The percentage result is the concatination of the first and second D10 and
-        //  not a random number between 1 and 100.
-        // The face numbers are reported as above explicitly stating which die each set
-        //  belongs to
-
-        // To make testing easier for the time being, two random seeds will be used in order
-        //  to ensure the appropriate roll results.
-
         [TestMethod]
         public void ReportsItsType()
         {
-            var percentile = new PercentileDice10and0(0, 0);
+            var percentile = new PercentileDice0and0(0, 0);
             var dieType = percentile.GetDieType();
 
             var expectedDieType = "Percentile (2D10 with face range 0 to 9 each)";
@@ -32,10 +21,10 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportItsFaceNumbers()
         {
-            var percentile = new PercentileDice10and0(0, 0);
+            var percentile = new PercentileDice0and0(0, 0);
             var faceNumbers = percentile.GetFaceNumbers();
 
-            var expectedFaceNumbers = @"Tens Die: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            var expectedFaceNumbers = @"Tens Die: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 Ones Die: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
 
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
@@ -47,10 +36,10 @@ Ones Die: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
             var tensSeed = 5;
             var onesSeed = 4;
 
-            var percentile = new PercentileDice10and0(tensSeed, onesSeed);
+            var percentile = new PercentileDice0and0(tensSeed, onesSeed);
             var result = percentile.RollDice();
 
-            var expectedResult = 48;
+            var expectedResult = 38;
             Assert.AreEqual(expectedResult, result);
         }
     }

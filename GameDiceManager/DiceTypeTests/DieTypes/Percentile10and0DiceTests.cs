@@ -7,17 +7,6 @@ namespace DiceTypeTests.DieTypes
     [TestClass]
     public class Percentile10and0DiceTests
     {
-        // The percentile dice are two D10s
-        //  The faces on the first D10 (the tens) number 1 to 10
-        //  The faces on the second D10 (the ones) number 0 to 9
-        // The percentage result is the concatination of the first and second D10 and
-        //  not a random number between 1 and 100.
-        // The face numbers are reported as above explicitly stating which die each set
-        //  belongs to
-
-        // To make testing easier for the time being, two random seeds will be used in order
-        //  to ensure the appropriate roll results.
-
         [TestMethod]
         public void ReportsItsType()
         {

@@ -10,7 +10,7 @@ namespace DiceTypes.DieTypes
         public PercentileDice0and0(int tensSeed, int onesSeed)
         {
             _tensDie = new Die(10, tensSeed);
-            _onesDie.ShiftRange(-1);
+            _tensDie.ShiftRange(-1);
 
             _onesDie = new Die(10, onesSeed);
             _onesDie.ShiftRange(-1);
@@ -18,7 +18,7 @@ namespace DiceTypes.DieTypes
 
         public string GetDieType()
         {
-            return "Percentile (2D10)";
+            return "Percentile (2D10 with face range 0 to 9 each)";
         }
 
         public string GetFaceNumbers()
