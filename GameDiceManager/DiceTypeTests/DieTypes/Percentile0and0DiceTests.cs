@@ -5,7 +5,7 @@ using System;
 namespace DiceTypeTests.DieTypes
 {
     [TestClass]
-    public class Percentile10and0DiceTests
+    public class Percentile0and0DiceTests
     {
         // The percentile dice are two D10s
         //  The faces on the first D10 (the tens) number 1 to 10
@@ -24,7 +24,7 @@ namespace DiceTypeTests.DieTypes
             var percentile = new PercentileDice10and0(0, 0);
             var dieType = percentile.GetDieType();
 
-            var expectedDieType = "Percentile (2D10 with face range 1 to 10 and 0 to 9)";
+            var expectedDieType = "Percentile (2D10 with face range 0 to 9 each)";
 
             Assert.AreEqual(expectedDieType, dieType);
         }

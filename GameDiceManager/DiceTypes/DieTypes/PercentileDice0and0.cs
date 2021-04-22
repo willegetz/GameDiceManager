@@ -2,21 +2,23 @@
 
 namespace DiceTypes.DieTypes
 {
-    public class PercentileDice10and0
+    public class PercentileDice0and0
     {
         private Die _tensDie;
         private Die _onesDie;
 
-        public PercentileDice10and0(int tensSeed, int onesSeed)
+        public PercentileDice0and0(int tensSeed, int onesSeed)
         {
             _tensDie = new Die(10, tensSeed);
+            _onesDie.ShiftRange(-1);
+
             _onesDie = new Die(10, onesSeed);
             _onesDie.ShiftRange(-1);
         }
 
         public string GetDieType()
         {
-            return "Percentile (2D10 with face range 1 to 10 and 0 to 9)";
+            return "Percentile (2D10)";
         }
 
         public string GetFaceNumbers()
