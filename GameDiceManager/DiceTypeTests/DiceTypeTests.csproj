@@ -54,7 +54,7 @@
     <Compile Include="DieTypes\D3RoundUpTests.cs" />
     <Compile Include="DieTypes\D66Tests.cs" />
     <Compile Include="DieTypes\D6Tests.cs" />
-    <Compile Include="DieTypes\PercentileDiceTests.cs" />
+    <Compile Include="DieTypes\Percentile10and0DiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,12 +2,12 @@
 
 namespace DiceTypes.DieTypes
 {
-    public class PercentileDice
+    public class PercentileDice10and0
     {
         private Die _tensDie;
         private Die _onesDie;
 
-        public PercentileDice(int tensSeed, int onesSeed)
+        public PercentileDice10and0(int tensSeed, int onesSeed)
         {
             _tensDie = new Die(10, tensSeed);
             _onesDie = new Die(10, onesSeed);
