@@ -63,5 +63,19 @@ D6: 1, 2, 3, 4, 5, 6";
 
             Assert.AreEqual(expectedResult, rollResult);
         }
+
+        [TestMethod]
+        public void Returns4WhenD6ResultIs3()
+        {
+            var d8RandomSeed = 11;
+            var d6RandomSeed = 9;
+
+            var d16 = new D16(d8RandomSeed, d6RandomSeed);
+            var rollResult = d16.RollDie();
+
+            var expectedResult = 4;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
     }
 }
