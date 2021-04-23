@@ -55,9 +55,11 @@
     <Compile Include="DieTypes\D3RoundUpTests.cs" />
     <Compile Include="DieTypes\D66Tests.cs" />
     <Compile Include="DieTypes\D6Tests.cs" />
+    <Compile Include="DieTypes\D8Tests.cs" />
     <Compile Include="DieTypes\Percentile0and0DiceTests.cs" />
     <Compile Include="DieTypes\Percentile10and0DiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelpers\GetSeedForValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

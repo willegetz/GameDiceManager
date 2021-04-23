@@ -47,6 +47,7 @@
     <Compile Include="DieTypes\D3RoundUp.cs" />
     <Compile Include="DieTypes\D6.cs" />
     <Compile Include="DieTypes\D66.cs" />
+    <Compile Include="DieTypes\D8.cs" />
     <Compile Include="DieTypes\PercentileDice0and0.cs" />
     <Compile Include="DieTypes\PercentileDice10and0.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

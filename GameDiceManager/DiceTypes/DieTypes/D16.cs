@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DiceTypes.DieTypes
+﻿namespace DiceTypes.DieTypes
 {
     public class D16
     {
-        private Die _d8;
-        private Die _d6;
+        private D8 _d8;
+        private D6 _d6;
 
         public D16(int d8RandomSeed, int d6RandomSeed)
         {
-            _d8 = new Die(8, d8RandomSeed);
-            _d6 = new Die(6, d6RandomSeed);
+            _d8 = new D8(d8RandomSeed);
+            _d6 = new D6(d6RandomSeed);
         }
 
         public string GetDieType()
@@ -24,8 +18,8 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            return $@"D8: {_d8.ListFaceNumbers()}
-D6: {_d6.ListFaceNumbers()}";
+            return $@"D8: {_d8.GetFaceNumbers()}
+D6: {_d6.GetFaceNumbers()}";
         }
 
         public int RollDie()
