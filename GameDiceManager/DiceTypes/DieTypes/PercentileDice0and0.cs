@@ -4,16 +4,16 @@ namespace DiceTypes.DieTypes
 {
     public class PercentileDice0and0
     {
-        private Die _tensDie;
-        private Die _onesDie;
+        private D10 _tensDie;
+        private D10 _onesDie;
 
         public PercentileDice0and0(int tensSeed, int onesSeed)
         {
-            _tensDie = new Die(10, tensSeed);
-            _tensDie.ShiftRange(-1);
+            _tensDie = new D10(tensSeed);
+            _tensDie.MakeOnesDie();
 
-            _onesDie = new Die(10, onesSeed);
-            _onesDie.ShiftRange(-1);
+            _onesDie = new D10(onesSeed);
+            _onesDie.MakeOnesDie();
         }
 
         public string GetDieType()
@@ -23,8 +23,9 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            var tensFaceNumbers = $"Tens Die: {_tensDie.ListFaceNumbers()}";
-            var onesFaceNumbers = $"Ones Die: {_onesDie.ListFaceNumbers()}";
+            var tensFaceNumbers = $"Tens Die: {_tensDie.GetFaceNumbers()}";
+            var onesFaceNumbers = $"Ones Die: {_onesDie.GetFaceNumbers()}";
+
             return $@"{tensFaceNumbers}
 {onesFaceNumbers}";
         }

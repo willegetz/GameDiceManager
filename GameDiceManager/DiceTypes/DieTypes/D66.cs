@@ -5,13 +5,13 @@ namespace DiceTypes.DieTypes
 {
     public class D66
     {
-        private Die _tensDie;
-        private Die _onesDie;
+        private D6 _tensDie;
+        private D6 _onesDie;
 
         public D66(int tensSeed, int onesSeed)
         {
-            _tensDie = new Die(6, tensSeed);
-            _onesDie = new Die(6, onesSeed);
+            _tensDie = new D6(tensSeed);
+            _onesDie = new D6(onesSeed);
         }
 
         public string GetDieType()
@@ -21,8 +21,8 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            var tensFaces = _tensDie.ListFaceNumbers();
-            var onesFaces = _onesDie.ListFaceNumbers();
+            var tensFaces = _tensDie.GetFaceNumbers();
+            var onesFaces = _onesDie.GetFaceNumbers();
 
             return $@"Tens Die: {tensFaces}
 Ones Die: {onesFaces}";
