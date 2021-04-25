@@ -1,12 +1,14 @@
-﻿namespace DiceTypes.DieTypes
+﻿using DiceTypes.Interfaces;
+
+namespace DiceTypes.DieTypes
 {
-    public class D12
+    public class D12 : IDie
     {
-        private Die _d12;
+        private BaseDie _d12;
 
         public D12(int randomSeed)
         {
-            _d12 = new Die(12, randomSeed);
+            _d12 = new BaseDie(12, randomSeed);
         }
 
         public string GetDieType()

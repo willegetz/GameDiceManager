@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DiceTypes.Interfaces;
+using System;
 
 namespace DiceTypes.DieTypes
 {
-    public class PercentileDice0and0
+    public class PercentileDice0and0 : IDie
     {
         private D10 _tensDie;
         private D10 _onesDie;
@@ -30,7 +31,7 @@ namespace DiceTypes.DieTypes
 {onesFaceNumbers}";
         }
 
-        public int RollDice()
+        public int RollDie()
         {
             var tensResult = _tensDie.RollDie();
             var onesResult = _onesDie.RollDie();

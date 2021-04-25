@@ -1,15 +1,16 @@
-﻿using System;
+﻿using DiceTypes.Interfaces;
+using System;
 using System.Linq;
 
 namespace DiceTypes.DieTypes
 {
-    public class D3RoundUp
+    public class D3RoundUp : IDie
     {
-        private Die _d6;
+        private BaseDie _d6;
 
         public D3RoundUp(int seed)
         {
-            _d6 = new Die(6, seed);
+            _d6 = new BaseDie(6, seed);
         }
         public string GetDieType()
         {

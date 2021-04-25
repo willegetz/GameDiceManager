@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Die.cs" />
+    <Compile Include="BaseDie.cs" />
     <Compile Include="DieTypes\D10.cs" />
     <Compile Include="DieTypes\D12.cs" />
     <Compile Include="DieTypes\D16.cs" />

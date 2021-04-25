@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DiceTypes
 {
-    public class Die
+    public class BaseDie
     {
         private int numberOfFaces;
         private int randomSeed;
@@ -12,7 +12,7 @@ namespace DiceTypes
         private int ExclusiveUpperBound { get { return (numberOfFaces + 1) + _rangeShiftValue; } }
         private int InclusiveLowerBound { get { return 1 + _rangeShiftValue; } }
 
-        public Die(int numberOfFaces, int randomSeed)
+        public BaseDie(int numberOfFaces, int randomSeed)
         {
             this.numberOfFaces = numberOfFaces;
             this.randomSeed = randomSeed;

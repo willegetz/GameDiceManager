@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
+﻿using DiceTypes.Interfaces;
+using System;
 
 namespace DiceTypes.DieTypes
 {
-    public class D66
+    public class D66 : IDie
     {
         private D6 _tensDie;
         private D6 _onesDie;

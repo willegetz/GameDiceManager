@@ -37,7 +37,7 @@ Ones Die: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
             var onesSeed = 4;
 
             var percentile = new PercentileDice10and0(tensSeed, onesSeed);
-            var result = percentile.RollDice();
+            var result = percentile.RollDie();
 
             var expectedResult = 48;
             Assert.AreEqual(expectedResult, result);
