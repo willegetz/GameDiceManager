@@ -1,6 +1,8 @@
-﻿namespace DiceTypes.DieTypes
+﻿using DiceTypes.Interfaces;
+
+namespace DiceTypes.DieTypes
 {
-    public class D16
+    public class D16 : IDie
     {
         private D8 _d8;
         private D6 _d6;

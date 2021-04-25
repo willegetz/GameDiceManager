@@ -51,6 +51,7 @@
     <Compile Include="DieTypes\D8.cs" />
     <Compile Include="DieTypes\PercentileDice0and0.cs" />
     <Compile Include="DieTypes\PercentileDice10and0.cs" />
+    <Compile Include="Interfaces\IDie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
