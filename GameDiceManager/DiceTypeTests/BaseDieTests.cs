@@ -71,6 +71,8 @@ namespace DiceTypeTests
             var randomSeed = 6;
 
             var d8 = new BaseDie(numberOfFaces, randomSeed);
+            d8.RandomSeed = 6;
+
             var rollResult = d8.RollDie();
 
             var expectedResult = 7;
