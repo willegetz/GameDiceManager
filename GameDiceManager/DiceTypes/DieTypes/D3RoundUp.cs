@@ -10,7 +10,7 @@ namespace DiceTypes.DieTypes
 
         public D3RoundUp(int seed)
         {
-            _d6 = new BaseDie(6, seed);
+            _d6 = new BaseDie(6);
         }
         public string GetDieType()
         {

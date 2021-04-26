@@ -11,13 +11,11 @@ namespace DiceTypes
 
         public int RandomSeed { get; set; }
 
-        private int randomSeed;
-
         private int _rangeShiftValue = 0;
         private int ExclusiveUpperBound { get { return (numberOfFaces + 1) + _rangeShiftValue; } }
         private int InclusiveLowerBound { get { return 1 + _rangeShiftValue; } }
 
-        public BaseDie(int numberOfFaces, int randomSeed)
+        public BaseDie(int numberOfFaces)
         {
             this.numberOfFaces = numberOfFaces;
             RandomSeed = Guid.NewGuid().GetHashCode();

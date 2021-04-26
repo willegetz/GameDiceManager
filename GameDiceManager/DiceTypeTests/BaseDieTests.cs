@@ -12,7 +12,7 @@ namespace DiceTypeTests
             var numberOfFaces = 6;
             var randomSeed = 13;
 
-            var d6 = new BaseDie(numberOfFaces, randomSeed);
+            var d6 = new BaseDie(numberOfFaces);
             var numbersOnD6 = d6.ListFaceNumbers();
 
             var expectedNumbers = "1, 2, 3, 4, 5, 6";
@@ -26,7 +26,7 @@ namespace DiceTypeTests
             var numberOfFaces = 8;
             var randomSeed = 6;
 
-            var d8 = new BaseDie(numberOfFaces, randomSeed);
+            var d8 = new BaseDie(numberOfFaces);
             var numbersOnD8 = d8.ListFaceNumbers();
 
             var expectedNumbersOnD8 = "1, 2, 3, 4, 5, 6, 7, 8";
@@ -40,7 +40,7 @@ namespace DiceTypeTests
             var numberOfFaces = 12;
             var randomSeed = 6;
 
-            var d12 = new BaseDie(numberOfFaces, randomSeed);
+            var d12 = new BaseDie(numberOfFaces);
             var numbersOnD12 = d12.ListFaceNumbers();
 
             var expectedNumbersOnD12 = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12";
@@ -54,7 +54,7 @@ namespace DiceTypeTests
             var numberOfFaces = 6;
             var randomSeed = 13;
 
-            var d6 = new BaseDie(numberOfFaces, randomSeed);
+            var d6 = new BaseDie(numberOfFaces);
             d6.RandomSeed = 13;
 
             var rollResult = d6.RollDie();
@@ -70,7 +70,7 @@ namespace DiceTypeTests
             var numberOfFaces = 8;
             var randomSeed = 6;
 
-            var d8 = new BaseDie(numberOfFaces, randomSeed);
+            var d8 = new BaseDie(numberOfFaces);
             d8.RandomSeed = 6;
 
             var rollResult = d8.RollDie();
@@ -86,7 +86,7 @@ namespace DiceTypeTests
             var numberOfFaces = 12;
             var randomSeed = 6;
 
-            var d12 = new BaseDie(numberOfFaces, randomSeed);
+            var d12 = new BaseDie(numberOfFaces);
             d12.RandomSeed = 6;
 
             var rollResult = d12.RollDie();
@@ -103,7 +103,7 @@ namespace DiceTypeTests
             var randomSeed = 0;
             var rangeShiftValue = 1;
 
-            var shiftedD6 = new BaseDie(numberOfFaces, randomSeed);
+            var shiftedD6 = new BaseDie(numberOfFaces);
             shiftedD6.ShiftRange(rangeShiftValue);
 
             var numbersOnShiftedD6 = shiftedD6.ListFaceNumbers();

@@ -8,7 +8,7 @@ namespace DiceTypes.DieTypes
 
         public D10(int randomSeed)
         {
-            _d10 = new BaseDie(10, randomSeed);
+            _d10 = new BaseDie(10);
         }
 
         public string GetDieType()

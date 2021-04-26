@@ -7,7 +7,7 @@ namespace DiceTypes.DieTypes
         private readonly BaseDie _d6;
         public D6(int randomSeed)
         {
-            _d6 = new BaseDie(6, randomSeed);
+            _d6 = new BaseDie(6);
         }
 
         public string GetDieType()
