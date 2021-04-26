@@ -55,6 +55,8 @@ namespace DiceTypeTests
             var randomSeed = 13;
 
             var d6 = new BaseDie(numberOfFaces, randomSeed);
+            d6.RandomSeed = 13;
+
             var rollResult = d6.RollDie();
 
             var expectedResult = 4;
@@ -83,6 +85,8 @@ namespace DiceTypeTests
             var randomSeed = 6;
 
             var d12 = new BaseDie(numberOfFaces, randomSeed);
+            d12.RandomSeed = 6;
+
             var rollResult = d12.RollDie();
 
             var expectedResult = 11;

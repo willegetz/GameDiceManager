@@ -5,7 +5,12 @@ namespace DiceTypes
 {
     public class BaseDie
     {
+        // The base die should be in charge of its own seeding
+
         private int numberOfFaces;
+
+        public int RandomSeed { get; set; }
+
         private int randomSeed;
 
         private int _rangeShiftValue = 0;
@@ -15,7 +20,7 @@ namespace DiceTypes
         public BaseDie(int numberOfFaces, int randomSeed)
         {
             this.numberOfFaces = numberOfFaces;
-            this.randomSeed = randomSeed;
+            RandomSeed = Guid.NewGuid().GetHashCode();
         }
 
         public string ListFaceNumbers()
@@ -26,7 +31,7 @@ namespace DiceTypes
 
         public int RollDie()
         {
-            var randomizer = new Random(randomSeed);
+            var randomizer = new Random(RandomSeed);
             var result = randomizer.Next(InclusiveLowerBound, ExclusiveUpperBound);
 
             return result;
