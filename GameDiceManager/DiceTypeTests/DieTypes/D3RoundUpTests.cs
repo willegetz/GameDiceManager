@@ -27,35 +27,5 @@ namespace DiceTypeTests.DieTypes
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
-
-        [TestMethod]
-        public void Returns3When5IsRolled()
-        {
-            var d3TypeA = new D3RoundUp(0);
-            var result = d3TypeA.RollDie();
-
-            var expectedResult = 3;
-            Assert.AreEqual(expectedResult, result);
-        }
-
-        [TestMethod]
-        public void Returns2When3IsRolled()
-        {
-            var d3TypeA = new D3RoundUp(5);
-            var result = d3TypeA.RollDie();
-
-            var expectedResult = 2;
-            Assert.AreEqual(expectedResult, result);
-        }
-
-        [TestMethod]
-        public void Returns1When1IsRolled()
-        {
-            var d3TypeA = new D3RoundUp(14);
-            var result = d3TypeA.RollDie();
-
-            var expectedResult = 1;
-            Assert.AreEqual(expectedResult, result);
-        }
     }
 }

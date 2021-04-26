@@ -29,18 +29,5 @@ Ones Die: 1, 2, 3, 4, 5, 6";
 
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
         }
-
-        [TestMethod]
-        public void Returns61WhenRolled()
-        {
-            var tensSeed = 6;
-            var onesSeed = 14;
-
-            var d66 = new D66(tensSeed, onesSeed);
-            var result = d66.RollDie();
-
-            var expectedResult = 61;
-            Assert.AreEqual(expectedResult, result);
-        }
     }
 }

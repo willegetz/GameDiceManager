@@ -27,19 +27,6 @@ namespace DiceTypeTests.DieTypes
         }
 
         [TestMethod]
-        public void Returns9WhenRolled()
-        {
-            var randomSeed = 4;
-
-            var d10 = new D10(randomSeed);
-            int rollResult = d10.RollDie();
-
-            var expectedResult = 9;
-
-            Assert.AreEqual(expectedResult, rollResult);
-        }
-
-        [TestMethod]
         public void MakeOnesDieReportsItsNewFaceNumbers()
         {
             var d10 = new D10(0);
@@ -49,21 +36,6 @@ namespace DiceTypeTests.DieTypes
 
             var expectedFaceNumbers = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
-        }
-
-        [TestMethod]
-        public void OnesDieReturns0WhenRolled()
-        {
-            var randomSeed = 14;
-
-            var d10OnesDie = new D10(randomSeed);
-            d10OnesDie.MakeOnesDie();
-
-            int rollResult = d10OnesDie.RollDie();
-
-            var expectedResult = 0;
-
-            Assert.AreEqual(expectedResult, rollResult);
         }
     }
 }
