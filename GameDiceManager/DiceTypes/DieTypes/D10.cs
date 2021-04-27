@@ -18,7 +18,7 @@ namespace DiceTypes.DieTypes
 
         public string GetFaceNumbers()
         {
-            return _d10.ListFaceNumbers();
+            return _d10.GetFaceNumbers();
         }
 
         public int RollDie()

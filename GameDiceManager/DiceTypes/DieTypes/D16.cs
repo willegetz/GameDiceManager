@@ -10,7 +10,7 @@ namespace DiceTypes.DieTypes
         public D16(int d8RandomSeed, int d6RandomSeed)
         {
             _d8 = new D8(d8RandomSeed);
-            _d6 = new D6(d6RandomSeed);
+            _d6 = new D6();
         }
 
         public string GetDieType()
