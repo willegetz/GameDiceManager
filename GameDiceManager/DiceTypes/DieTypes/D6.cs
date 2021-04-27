@@ -2,27 +2,15 @@
 
 namespace DiceTypes.DieTypes
 {
-    public class D6 : IDie
+    public class D6: BaseDie
     {
-        private readonly BaseDie _d6;
-        public D6(int randomSeed)
+        public D6() : base(6)
         {
-            _d6 = new BaseDie(6);
         }
 
         public string GetDieType()
         {
             return "D6";
-        }
-
-        public string GetFaceNumbers()
-        {
-            return _d6.ListFaceNumbers();
-        }
-
-        public int RollDie()
-        {
-            return _d6.RollDie();
         }
     }
 }
