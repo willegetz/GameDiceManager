@@ -8,6 +8,11 @@ namespace DiceTypes.DieTypes
         {
         }
 
+        public D6(int randomSeed) : base(6, randomSeed)
+        {
+
+        }
+
         public string GetDieType()
         {
             return "D6";

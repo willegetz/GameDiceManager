@@ -21,6 +21,12 @@ namespace DiceTypes
             RandomSeed = Guid.NewGuid().GetHashCode();
         }
 
+        public BaseDie(int numberOfFaces, int randomSeed)
+        {
+            this.numberOfFaces = numberOfFaces;
+            RandomSeed = randomSeed;
+        }
+
         public string GetFaceNumbers()
         {
             var numbersOnDie = Enumerable.Range(InclusiveLowerBound, numberOfFaces);

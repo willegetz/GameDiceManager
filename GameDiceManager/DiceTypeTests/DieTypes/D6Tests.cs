@@ -31,9 +31,9 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void Returns5WhenRolled()
         {
-            var d6 = new D6();
-            d6.RandomSeed = 0;
+            var randomSeed = 0;
 
+            var d6 = new D6(randomSeed);
             var rollResult = d6.RollDie();
 
             var expectedRollResult = 5;
@@ -41,6 +41,7 @@ namespace DiceTypeTests.DieTypes
         }
 
         [TestMethod]
+        [Ignore("This is an exploration of mocking")]
         public void Spike_MockDieRollResult()
         {
             var dieMock = new Mock<IDie>();
