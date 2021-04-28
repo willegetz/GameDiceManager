@@ -42,18 +42,5 @@ namespace DiceTypeTests.DieTypes.Basic
             var expectedRollResult = 5;
             Assert.AreEqual(expectedRollResult, rollResult);
         }
-
-        [TestMethod]
-        [Ignore("This is an exploration of mocking")]
-        public void Spike_MockDieRollResult()
-        {
-            var dieMock = new Mock<IDie>();
-            dieMock.Setup(x => x.RollDie()).Returns(7);
-
-            var d6 = new D6();
-            var result = d6.RollDie();
-
-            Assert.AreEqual(2, result);
-        }
     }
 }
