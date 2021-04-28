@@ -1,8 +1,5 @@
 ﻿using DiceTypes.DieTypes;
-using DiceTypeTests.TestHelpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Linq;
 
 namespace DiceTypeTests.DieTypes
 {

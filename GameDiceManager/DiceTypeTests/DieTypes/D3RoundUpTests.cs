@@ -11,7 +11,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportsItsType()
         {
-            var d3TypeA = new D3RoundUp(0);
+            var d3TypeA = new D3RoundUp();
             var dieType = d3TypeA.GetDieType();
 
             var expectedDieType = "D3 Round Up (D6 result / 2 rounded up)";
@@ -21,7 +21,7 @@ namespace DiceTypeTests.DieTypes
         [TestMethod]
         public void ReportsItsFaces()
         {
-            var d3TypeA = new D3RoundUp(0);
+            var d3TypeA = new D3RoundUp();
             var faceNumbers = d3TypeA.GetFaceNumbers();
 
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
