@@ -1,5 +1,7 @@
 ﻿using DiceTypes.DieTypes.Complex;
+using DiceTypes.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace DiceTypeTests.DieTypes.Complex
 {
@@ -37,10 +39,15 @@ D6: 1, 2, 3, 4, 5, 6";
         [TestMethod]
         public void Returns8WhenRolled()
         {
-            var d8RandomSeed = 8;
-            var d6RandomSeed = 5;
+            var d8Seed = 8;
+            var d6Seed = 5;
 
-            var d16 = new D16(d8RandomSeed, d6RandomSeed);
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.SetupSequence(x => x.GetRandomSeed())
+                             .Returns(d8Seed)
+                             .Returns(d6Seed);
+
+            var d16 = new D16(mockSeedGenerator.Object);
             var rollResult = d16.RollDie();
 
             var expectedRollResult = 8;
@@ -51,10 +58,15 @@ D6: 1, 2, 3, 4, 5, 6";
         [TestMethod]
         public void Returns13WhenRolled()
         {
-            var d8RandomSeed = 13;
-            var d6RandomSeed = 13;
+            var d8Seed = 13;
+            var d6Seed = 13;
 
-            var d16 = new D16(d8RandomSeed, d6RandomSeed);
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.SetupSequence(x => x.GetRandomSeed())
+                             .Returns(d8Seed)
+                             .Returns(d6Seed);
+
+            var d16 = new D16(mockSeedGenerator.Object);
             var rollResult = d16.RollDie();
 
             var expectedRollResult = 13;

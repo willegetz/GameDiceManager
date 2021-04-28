@@ -20,6 +20,12 @@ namespace DiceTypes.DieTypes.Complex
             _d6 = new D6(d6RandomSeed);
         }
 
+        public D16(ISeedGenerator seedGenerator)
+        {
+            _d8 = new D8(seedGenerator);
+            _d6 = new D6(seedGenerator);
+        }
+
         public string GetDieType()
         {
             return "D16";
