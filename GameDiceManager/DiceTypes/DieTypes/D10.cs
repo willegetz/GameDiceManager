@@ -4,16 +4,15 @@ namespace DiceTypes.DieTypes
 {
     public class D10 : BaseDie
     {
-        private readonly BaseDie _d10;
 
         public D10() : base(10)
         {
 
         }
 
-        public D10(int randomSeed) : base(10)
+        public D10(int randomSeed) : base(10, randomSeed)
         {
-            _d10 = new BaseDie(10);
+
         }
 
         public string GetDieType()
