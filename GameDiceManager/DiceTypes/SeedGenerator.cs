@@ -4,7 +4,7 @@
     {
         public int GetRandomSeed()
         {
-            return -1;
+            return Guid.NewGuid().GetHashCode();
         }
     }
 }
