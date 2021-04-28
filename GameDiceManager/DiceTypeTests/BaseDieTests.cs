@@ -1,5 +1,7 @@
 ﻿using DiceTypes;
+using DiceTypes.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace DiceTypeTests
 {
@@ -104,6 +106,24 @@ namespace DiceTypeTests
             var expectedNumbersOnShiftedD6 = "2, 3, 4, 5, 6, 7";
 
             Assert.AreEqual(expectedNumbersOnShiftedD6, numbersOnShiftedD6);
+        }
+
+        [TestMethod]
+        public void D20_Returns13WhenRolled()
+        {
+            var seedValue = 17;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var numberOfFaces = 20;
+
+            var d20 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
+            var rollResult = d20.RollDie();
+
+            var expectedRollResult = 13;
+
+            Assert.AreEqual(expectedRollResult, rollResult);
         }
     }
 }

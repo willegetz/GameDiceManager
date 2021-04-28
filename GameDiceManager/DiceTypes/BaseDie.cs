@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiceTypes.Interfaces;
+using System;
 using System.Linq;
 
 namespace DiceTypes
@@ -25,6 +26,12 @@ namespace DiceTypes
         {
             this.numberOfFaces = numberOfFaces;
             _randomSeed = randomSeed;
+        }
+
+        public BaseDie(int numberOfFaces, ISeedGenerator seedGenerator)
+        {
+            this.numberOfFaces = numberOfFaces;
+            _randomSeed = seedGenerator.GetRandomSeed();
         }
 
         public string GetFaceNumbers()

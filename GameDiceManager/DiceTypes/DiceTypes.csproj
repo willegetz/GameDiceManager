@@ -54,7 +54,9 @@
     <Compile Include="DieTypes\Complex\PercentileDice0and0.cs" />
     <Compile Include="DieTypes\Complex\PercentileDice10and0.cs" />
     <Compile Include="Interfaces\IDie.cs" />
+    <Compile Include="Interfaces\ISeedGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeedGenerator.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
