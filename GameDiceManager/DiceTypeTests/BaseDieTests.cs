@@ -10,7 +10,6 @@ namespace DiceTypeTests
         public void D6_ListsItsNumbers()
         {
             var numberOfFaces = 6;
-            var randomSeed = 13;
 
             var d6 = new BaseDie(numberOfFaces);
             var numbersOnD6 = d6.GetFaceNumbers();
@@ -24,7 +23,6 @@ namespace DiceTypeTests
         public void D8_ListsItsNumbers()
         {
             var numberOfFaces = 8;
-            var randomSeed = 6;
 
             var d8 = new BaseDie(numberOfFaces);
             var numbersOnD8 = d8.GetFaceNumbers();
@@ -38,7 +36,6 @@ namespace DiceTypeTests
         public void D12_ListsItsNumbers()
         {
             var numberOfFaces = 12;
-            var randomSeed = 6;
 
             var d12 = new BaseDie(numberOfFaces);
             var numbersOnD12 = d12.GetFaceNumbers();
@@ -54,8 +51,7 @@ namespace DiceTypeTests
             var numberOfFaces = 6;
             var randomSeed = 13;
 
-            var d6 = new BaseDie(numberOfFaces);
-            d6.RandomSeed = 13;
+            var d6 = new BaseDie(numberOfFaces, randomSeed);
 
             var rollResult = d6.RollDie();
 
@@ -70,8 +66,7 @@ namespace DiceTypeTests
             var numberOfFaces = 8;
             var randomSeed = 6;
 
-            var d8 = new BaseDie(numberOfFaces);
-            d8.RandomSeed = 6;
+            var d8 = new BaseDie(numberOfFaces, randomSeed);
 
             var rollResult = d8.RollDie();
 
@@ -86,8 +81,7 @@ namespace DiceTypeTests
             var numberOfFaces = 12;
             var randomSeed = 6;
 
-            var d12 = new BaseDie(numberOfFaces);
-            d12.RandomSeed = 6;
+            var d12 = new BaseDie(numberOfFaces, randomSeed);
 
             var rollResult = d12.RollDie();
 
@@ -100,7 +94,6 @@ namespace DiceTypeTests
         public void D6_ShiftsRangeByOneWhenToldTo()
         {
             var numberOfFaces = 6;
-            var randomSeed = 0;
             var rangeShiftValue = 1;
 
             var shiftedD6 = new BaseDie(numberOfFaces);
