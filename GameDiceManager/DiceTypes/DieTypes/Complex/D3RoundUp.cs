@@ -1,8 +1,7 @@
 ﻿using DiceTypes.Interfaces;
 using System;
-using System.Linq;
 
-namespace DiceTypes.DieTypes
+namespace DiceTypes.DieTypes.Complex
 {
     public class D3RoundUp : BaseDie, IDie
     {

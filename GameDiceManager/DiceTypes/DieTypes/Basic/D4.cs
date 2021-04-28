@@ -1,6 +1,6 @@
 ﻿using DiceTypes.Interfaces;
 
-namespace DiceTypes.DieTypes
+namespace DiceTypes.DieTypes.Basic
 {
     public class D4 : BaseDie, IDie
     {

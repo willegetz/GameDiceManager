@@ -1,6 +1,6 @@
 ﻿using DiceTypes.Interfaces;
 
-namespace DiceTypes.DieTypes
+namespace DiceTypes.DieTypes.Basic
 {
     public class D10 : BaseDie, IDie
     {
@@ -23,7 +23,7 @@ namespace DiceTypes.DieTypes
         public void MakeOnesDie()
         {
             var rangeShiftValue = -1;
-            base.ShiftRange(rangeShiftValue);
+            ShiftRange(rangeShiftValue);
         }
     }
 }

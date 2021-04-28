@@ -42,17 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDie.cs" />
-    <Compile Include="DieTypes\D10.cs" />
-    <Compile Include="DieTypes\D12.cs" />
-    <Compile Include="DieTypes\D16.cs" />
-    <Compile Include="DieTypes\D20.cs" />
-    <Compile Include="DieTypes\D3RoundUp.cs" />
-    <Compile Include="DieTypes\D4.cs" />
-    <Compile Include="DieTypes\D6.cs" />
-    <Compile Include="DieTypes\D66.cs" />
-    <Compile Include="DieTypes\D8.cs" />
-    <Compile Include="DieTypes\PercentileDice0and0.cs" />
-    <Compile Include="DieTypes\PercentileDice10and0.cs" />
+    <Compile Include="DieTypes\Basic\D10.cs" />
+    <Compile Include="DieTypes\Basic\D12.cs" />
+    <Compile Include="DieTypes\Complex\D16.cs" />
+    <Compile Include="DieTypes\Basic\D20.cs" />
+    <Compile Include="DieTypes\Complex\D3RoundUp.cs" />
+    <Compile Include="DieTypes\Basic\D4.cs" />
+    <Compile Include="DieTypes\Basic\D6.cs" />
+    <Compile Include="DieTypes\Complex\D66.cs" />
+    <Compile Include="DieTypes\Basic\D8.cs" />
+    <Compile Include="DieTypes\Complex\PercentileDice0and0.cs" />
+    <Compile Include="DieTypes\Complex\PercentileDice10and0.cs" />
     <Compile Include="Interfaces\IDie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

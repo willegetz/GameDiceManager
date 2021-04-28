@@ -1,4 +1,4 @@
-﻿using DiceTypes.DieTypes;
+﻿using DiceTypes.DieTypes.Complex;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DiceTypeTests.DieTypes.Complex

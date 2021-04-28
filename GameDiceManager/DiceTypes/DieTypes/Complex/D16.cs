@@ -1,6 +1,7 @@
-﻿using DiceTypes.Interfaces;
+﻿using DiceTypes.DieTypes.Basic;
+using DiceTypes.Interfaces;
 
-namespace DiceTypes.DieTypes
+namespace DiceTypes.DieTypes.Complex
 {
     public class D16 : IDie
     {
