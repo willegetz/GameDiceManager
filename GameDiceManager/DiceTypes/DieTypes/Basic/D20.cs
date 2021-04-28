@@ -12,6 +12,11 @@ namespace DiceTypes.DieTypes.Basic
         {
         }
 
+        public D20(ISeedGenerator seedGenerator) : base(20, seedGenerator)
+        {
+
+        }
+
         public string GetDieType()
         {
             return "D20";
