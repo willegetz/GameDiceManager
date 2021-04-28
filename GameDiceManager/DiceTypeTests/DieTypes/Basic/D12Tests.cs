@@ -1,5 +1,7 @@
 ﻿using DiceTypes.DieTypes.Basic;
+using DiceTypes.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace DiceTypeTests.DieTypes.Basic
 {
@@ -29,9 +31,12 @@ namespace DiceTypeTests.DieTypes.Basic
         [TestMethod]
         public void Returns11WhenRolled()
         {
-            var randomSeed = 6;
+            var seedValue = 6;
 
-            var d12 = new D12(randomSeed);
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d12 = new D12(mockSeedGenerator.Object);
             var rollResult = d12.RollDie();
 
             var expectedRollResult = 11;
