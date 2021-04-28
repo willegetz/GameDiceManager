@@ -2,28 +2,21 @@
 
 namespace DiceTypes.DieTypes
 {
-    public class D8 : IDie
+    public class D8 : BaseDie, IDie
     {
-        private readonly BaseDie _d8;
-
-        public D8(int randomSeed)
+        public D8() : base(8)
         {
-            _d8 = new BaseDie(8);
+
+        }
+
+        public D8(int randomSeed) : base(8, randomSeed)
+        {
+
         }
 
         public string GetDieType()
         {
             return "D8";
-        }
-
-        public string GetFaceNumbers()
-        {
-            return _d8.GetFaceNumbers();
-        }
-
-        public int RollDie()
-        {
-            return _d8.RollDie();
         }
     }
 }
