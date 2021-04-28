@@ -1,4 +1,5 @@
 ﻿using DiceTypes.DieTypes;
+using DiceTypeTests.TestHelpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
@@ -26,6 +27,20 @@ namespace DiceTypeTests.DieTypes
 
             var expectedFaceNumbers = "1, 2, 3, 4, 5, 6";
             Assert.AreEqual(expectedFaceNumbers, faceNumbers);
+        }
+
+        [TestMethod]
+        public void Returns2WhenRolled()
+        {
+            var randomSeed = 5;
+
+            var d3 = new D3RoundUp(randomSeed);
+            var rollResult = d3.RollDie();
+            
+
+            var expectedRollResult = 2;
+
+            Assert.AreEqual(expectedRollResult, rollResult);
         }
     }
 }

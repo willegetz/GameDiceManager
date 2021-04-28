@@ -33,7 +33,7 @@ namespace DiceTypes
             return string.Join(", ", numbersOnDie);
         }
 
-        public int RollDie()
+        public virtual int RollDie()
         {
             var randomizer = new Random(_randomSeed);
             var result = randomizer.Next(InclusiveLowerBound, ExclusiveUpperBound);
