@@ -48,51 +48,6 @@ namespace DiceTypeTests
         }
 
         [TestMethod]
-        public void D6_Returns4WhenRolled()
-        {
-            var numberOfFaces = 6;
-            var randomSeed = 13;
-
-            var d6 = new BaseDie(numberOfFaces, randomSeed);
-
-            var rollResult = d6.RollDie();
-
-            var expectedResult = 4;
-
-            Assert.AreEqual(expectedResult, rollResult);
-        }
-
-        [TestMethod]
-        public void D8_Returns7WhenRolled()
-        {
-            var numberOfFaces = 8;
-            var randomSeed = 6;
-
-            var d8 = new BaseDie(numberOfFaces, randomSeed);
-
-            var rollResult = d8.RollDie();
-
-            var expectedResult = 7;
-
-            Assert.AreEqual(expectedResult, rollResult);
-        }
-
-        [TestMethod]
-        public void D12_Returns11WhenRolled()
-        {
-            var numberOfFaces = 12;
-            var randomSeed = 6;
-
-            var d12 = new BaseDie(numberOfFaces, randomSeed);
-
-            var rollResult = d12.RollDie();
-
-            var expectedResult = 11;
-
-            Assert.AreEqual(expectedResult, rollResult);
-        }
-
-        [TestMethod]
         public void D6_ShiftsRangeByOneWhenToldTo()
         {
             var numberOfFaces = 6;
@@ -109,14 +64,65 @@ namespace DiceTypeTests
         }
 
         [TestMethod]
+        public void D6_Returns4WhenRolled()
+        {
+            var numberOfFaces = 6;
+            var seedValue = 13;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d6 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
+            var rollResult = d6.RollDie();
+
+            var expectedResult = 4;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
+
+        [TestMethod]
+        public void D8_Returns7WhenRolled()
+        {
+            var numberOfFaces = 8;
+            var seedValue = 6;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d8 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
+            var rollResult = d8.RollDie();
+
+            var expectedResult = 7;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
+
+        [TestMethod]
+        public void D12_Returns11WhenRolled()
+        {
+            var numberOfFaces = 12;
+            var seedValue = 6;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d12 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
+            var rollResult = d12.RollDie();
+
+            var expectedResult = 11;
+
+            Assert.AreEqual(expectedResult, rollResult);
+        }
+
+        [TestMethod]
         public void D20_Returns13WhenRolled()
         {
+            var numberOfFaces = 20;
             var seedValue = 17;
 
             var mockSeedGenerator = new Mock<ISeedGenerator>();
             mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
 
-            var numberOfFaces = 20;
 
             var d20 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
             var rollResult = d20.RollDie();
