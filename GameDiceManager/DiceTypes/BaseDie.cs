@@ -9,7 +9,7 @@ namespace DiceTypes
 
         private int numberOfFaces;
 
-        public int RandomSeed { get; set; }
+        private int _randomSeed;
 
         private int _rangeShiftValue = 0;
         private int ExclusiveUpperBound { get { return (numberOfFaces + 1) + _rangeShiftValue; } }
@@ -18,13 +18,13 @@ namespace DiceTypes
         public BaseDie(int numberOfFaces)
         {
             this.numberOfFaces = numberOfFaces;
-            RandomSeed = Guid.NewGuid().GetHashCode();
+            _randomSeed = Guid.NewGuid().GetHashCode();
         }
 
         public BaseDie(int numberOfFaces, int randomSeed)
         {
             this.numberOfFaces = numberOfFaces;
-            RandomSeed = randomSeed;
+            _randomSeed = randomSeed;
         }
 
         public string GetFaceNumbers()
@@ -35,7 +35,7 @@ namespace DiceTypes
 
         public int RollDie()
         {
-            var randomizer = new Random(RandomSeed);
+            var randomizer = new Random(_randomSeed);
             var result = randomizer.Next(InclusiveLowerBound, ExclusiveUpperBound);
 
             return result;
