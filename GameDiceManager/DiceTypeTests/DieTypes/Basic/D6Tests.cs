@@ -31,9 +31,12 @@ namespace DiceTypeTests.DieTypes.Basic
         [TestMethod]
         public void Returns5WhenRolled()
         {
-            var randomSeed = 0;
+            var seedValue = 0;
 
-            var d6 = new D6(randomSeed);
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d6 = new D6(mockSeedGenerator.Object);
             var rollResult = d6.RollDie();
 
             var expectedRollResult = 5;
