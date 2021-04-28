@@ -1,8 +1,7 @@
 ﻿using DiceTypes.DieTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
-namespace DiceTypeTests.DieTypes
+namespace DiceTypeTests.DieTypes.Complex
 {
     [TestClass]
     public class Percentile10and0DiceTests

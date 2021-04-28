@@ -63,17 +63,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDieTests.cs" />
-    <Compile Include="DieTypes\D10Tests.cs" />
-    <Compile Include="DieTypes\D12Tests.cs" />
-    <Compile Include="DieTypes\D16Tests.cs" />
-    <Compile Include="DieTypes\D20Tests.cs" />
-    <Compile Include="DieTypes\D3RoundUpTests.cs" />
-    <Compile Include="DieTypes\D4Tests.cs" />
-    <Compile Include="DieTypes\D66Tests.cs" />
-    <Compile Include="DieTypes\D6Tests.cs" />
-    <Compile Include="DieTypes\D8Tests.cs" />
-    <Compile Include="DieTypes\Percentile0and0DiceTests.cs" />
-    <Compile Include="DieTypes\Percentile10and0DiceTests.cs" />
+    <Compile Include="DieTypes\Basic\D10Tests.cs" />
+    <Compile Include="DieTypes\Basic\D12Tests.cs" />
+    <Compile Include="DieTypes\Complex\D16Tests.cs" />
+    <Compile Include="DieTypes\Basic\D20Tests.cs" />
+    <Compile Include="DieTypes\Complex\D3RoundUpTests.cs" />
+    <Compile Include="DieTypes\Basic\D4Tests.cs" />
+    <Compile Include="DieTypes\Complex\D66Tests.cs" />
+    <Compile Include="DieTypes\Basic\D6Tests.cs" />
+    <Compile Include="DieTypes\Basic\D8Tests.cs" />
+    <Compile Include="DieTypes\Complex\Percentile0and0DiceTests.cs" />
+    <Compile Include="DieTypes\Complex\Percentile10and0DiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\SeedFinder.cs" />
   </ItemGroup>

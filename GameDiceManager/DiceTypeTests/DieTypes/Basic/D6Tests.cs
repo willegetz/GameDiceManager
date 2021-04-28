@@ -3,7 +3,7 @@ using DiceTypes.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace DiceTypeTests.DieTypes
+namespace DiceTypeTests.DieTypes.Basic
 {
     [TestClass]
     public class D6Tests

@@ -1,7 +1,7 @@
 ﻿using DiceTypes.DieTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DiceTypeTests.DieTypes
+namespace DiceTypeTests.DieTypes.Basic
 {
     [TestClass]
     public class D10Tests

@@ -1,7 +1,7 @@
 ﻿using DiceTypes.DieTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DiceTypeTests.DieTypes
+namespace DiceTypeTests.DieTypes.Complex
 {
     // From World Builder's Guidebook
     // In orrder to generate a d16, roll a d6 and a d8 simultaneously.
