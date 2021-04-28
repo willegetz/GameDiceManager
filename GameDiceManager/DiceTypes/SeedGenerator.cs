@@ -1,4 +1,6 @@
-﻿namespace DiceTypes
+﻿using System;
+
+namespace DiceTypes
 {
     public class SeedGenerator
     {
