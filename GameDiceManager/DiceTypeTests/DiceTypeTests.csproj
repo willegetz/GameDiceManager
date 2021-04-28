@@ -67,6 +67,7 @@
     <Compile Include="DieTypes\D12Tests.cs" />
     <Compile Include="DieTypes\D16Tests.cs" />
     <Compile Include="DieTypes\D3RoundUpTests.cs" />
+    <Compile Include="DieTypes\D4Tests.cs" />
     <Compile Include="DieTypes\D66Tests.cs" />
     <Compile Include="DieTypes\D6Tests.cs" />
     <Compile Include="DieTypes\D8Tests.cs" />
