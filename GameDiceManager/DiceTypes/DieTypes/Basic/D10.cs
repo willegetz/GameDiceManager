@@ -15,6 +15,10 @@ namespace DiceTypes.DieTypes.Basic
 
         }
 
+        public D10(ISeedGenerator seedGenerator) : base(10, seedGenerator)
+        {
+        }
+
         public string GetDieType()
         {
             return "D10";
