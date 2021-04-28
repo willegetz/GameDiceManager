@@ -14,6 +14,11 @@ namespace DiceTypes.DieTypes.Basic
 
         }
 
+        public D8(ISeedGenerator seedGenerator) : base(8, seedGenerator)
+        {
+
+        }
+
         public string GetDieType()
         {
             return "D8";
