@@ -2,7 +2,7 @@
 
 namespace DiceTypes.DieTypes
 {
-    public class D6: BaseDie
+    public class D6: BaseDie, IDie
     {
         public D6() : base(6)
         {
