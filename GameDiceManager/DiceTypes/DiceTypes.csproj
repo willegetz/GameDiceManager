@@ -45,6 +45,7 @@
     <Compile Include="DieTypes\D10.cs" />
     <Compile Include="DieTypes\D12.cs" />
     <Compile Include="DieTypes\D16.cs" />
+    <Compile Include="DieTypes\D20.cs" />
     <Compile Include="DieTypes\D3RoundUp.cs" />
     <Compile Include="DieTypes\D4.cs" />
     <Compile Include="DieTypes\D6.cs" />
