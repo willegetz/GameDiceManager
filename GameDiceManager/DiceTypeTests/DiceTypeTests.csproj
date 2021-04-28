@@ -73,7 +73,7 @@
     <Compile Include="DieTypes\Percentile0and0DiceTests.cs" />
     <Compile Include="DieTypes\Percentile10and0DiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestHelpers\GetSeedForValue.cs" />
+    <Compile Include="TestHelpers\SeedFinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
