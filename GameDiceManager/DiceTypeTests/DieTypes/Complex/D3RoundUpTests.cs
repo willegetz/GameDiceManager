@@ -1,5 +1,7 @@
 ﻿using DiceTypes.DieTypes.Complex;
+using DiceTypes.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace DiceTypeTests.DieTypes.Complex
 {
@@ -31,9 +33,12 @@ namespace DiceTypeTests.DieTypes.Complex
         {
             var randomSeed = 5;
 
-            var d3 = new D3RoundUp(randomSeed);
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed())
+                             .Returns(randomSeed);
+
+            var d3 = new D3RoundUp(mockSeedGenerator.Object);
             var rollResult = d3.RollDie();
-            
 
             var expectedRollResult = 2;
 

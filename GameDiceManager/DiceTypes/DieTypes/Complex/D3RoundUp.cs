@@ -10,9 +10,8 @@ namespace DiceTypes.DieTypes.Complex
 
         }
 
-        public D3RoundUp(int randomSeed): base(6, randomSeed)
+        public D3RoundUp(ISeedGenerator seedGenerator) : base(6, seedGenerator)
         {
-
         }
 
         public string GetDieType()
