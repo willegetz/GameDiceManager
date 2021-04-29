@@ -9,12 +9,22 @@ namespace DiceTypes.DieTypes.Complex
         private D10 _tensDie;
         private D10 _onesDie;
 
-        public PercentileDice0and0(int tensSeed, int onesSeed)
+
+        public PercentileDice0and0()
         {
-            _tensDie = new D10(tensSeed);
+            _tensDie = new D10();
             _tensDie.MakeOnesDie();
 
-            _onesDie = new D10(onesSeed);
+            _onesDie = new D10();
+            _onesDie.MakeOnesDie();
+        }
+
+        public PercentileDice0and0(ISeedGenerator seedGenerator)
+        {
+            _tensDie = new D10(seedGenerator);
+            _tensDie.MakeOnesDie();
+
+            _onesDie = new D10(seedGenerator);
             _onesDie.MakeOnesDie();
         }
 
