@@ -9,10 +9,16 @@ namespace DiceTypes.DieTypes.Complex
         private D6 _tensDie;
         private D6 _onesDie;
 
-        public D66(int tensSeed, int onesSeed)
+        public D66()
         {
             _tensDie = new D6();
             _onesDie = new D6();
+        }
+
+        public D66(ISeedGenerator seedGenerator)
+        {
+            _tensDie = new D6(seedGenerator);
+            _onesDie = new D6(seedGenerator);
         }
 
         public string GetDieType()
