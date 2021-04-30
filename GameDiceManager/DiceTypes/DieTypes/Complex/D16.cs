@@ -14,12 +14,6 @@ namespace DiceTypes.DieTypes.Complex
             _d6 = new D6();
         }
 
-        public D16(int d8RandomSeed, int d6RandomSeed)
-        {
-            _d8 = new D8(d8RandomSeed);
-            _d6 = new D6(d6RandomSeed);
-        }
-
         public D16(ISeedGenerator seedGenerator)
         {
             _d8 = new D8(seedGenerator);

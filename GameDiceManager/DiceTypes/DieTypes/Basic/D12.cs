@@ -9,11 +9,6 @@ namespace DiceTypes.DieTypes.Basic
 
         }
 
-        public D12(int randomSeed) : base(12, randomSeed)
-        {
-
-        }
-
         public D12(ISeedGenerator seedGenerator) : base(12, seedGenerator)
         {
 

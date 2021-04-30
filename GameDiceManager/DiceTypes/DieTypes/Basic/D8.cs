@@ -9,11 +9,6 @@ namespace DiceTypes.DieTypes.Basic
 
         }
 
-        public D8(int randomSeed) : base(8, randomSeed)
-        {
-
-        }
-
         public D8(ISeedGenerator seedGenerator) : base(8, seedGenerator)
         {
 

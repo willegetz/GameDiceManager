@@ -8,10 +8,6 @@ namespace DiceTypes.DieTypes.Basic
         {
         }
 
-        public D20(int randomSeed) : base(20, randomSeed)
-        {
-        }
-
         public D20(ISeedGenerator seedGenerator) : base(20, seedGenerator)
         {
 

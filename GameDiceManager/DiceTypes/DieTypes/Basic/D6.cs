@@ -8,10 +8,6 @@ namespace DiceTypes.DieTypes.Basic
         {
         }
 
-        public D6(int randomSeed) : base(6, randomSeed)
-        {
-
-        }
 
         public D6(ISeedGenerator seedGenerator) : base(6, seedGenerator)
         {
