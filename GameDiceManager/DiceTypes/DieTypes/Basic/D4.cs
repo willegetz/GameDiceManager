@@ -18,5 +18,12 @@ namespace DiceTypes.DieTypes.Basic
         {
             return "D4";
         }
+
+        public string ReportRollResult()
+        {
+            var result = base.ReportRollValue();
+
+            return result != null ? result.ToString() : "D4: Not Yet Rolled";
+        }
     }
 }
