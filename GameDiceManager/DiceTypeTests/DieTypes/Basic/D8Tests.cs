@@ -29,7 +29,7 @@ namespace DiceTypeTests.DieTypes.Basic
         }
 
         [TestMethod]
-        public void Returns7WhenRolled()
+        public void Returns7WhenRolledWithSeed2()
         {
             var seedValue = 2;
 
@@ -41,6 +41,23 @@ namespace DiceTypeTests.DieTypes.Basic
             
             var expectedRollResult = 7;
             Assert.AreEqual(expectedRollResult, rollResult);
+        }
+
+        [TestMethod]
+        public void ReportsRollResultOf7AfterDieRollResultsIn7()
+        {
+            var seedValue = 2;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d8 = new D8(mockSeedGenerator.Object);
+            var rollResult = d8.RollDie();
+            var reportedResult = d8.ReportRollValue();
+
+            var expectedRollResult = 7;
+            Assert.AreEqual(expectedRollResult, rollResult);
+            Assert.AreEqual(expectedRollResult, reportedResult);
         }
     }
 }

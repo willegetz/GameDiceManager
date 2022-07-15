@@ -44,7 +44,7 @@ namespace DiceTypeTests.DieTypes.Basic
         }
 
         [TestMethod]
-        public void D6_ReportsRollResultOf5AfterDieRollResultsIn5()
+        public void ReportsRollResultOf5AfterDieRollResultsIn5()
         {
             var seedValue = 0;
 
