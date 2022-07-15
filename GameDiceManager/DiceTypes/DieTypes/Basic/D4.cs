@@ -23,7 +23,7 @@ namespace DiceTypes.DieTypes.Basic
         {
             var result = base.ReportRollValue();
 
-            return result != null ? result.ToString() : "D4: Not Yet Rolled";
+            return result != null ? result.ToString() : $"{GetDieType()}: Not Yet Rolled";
         }
     }
 }
