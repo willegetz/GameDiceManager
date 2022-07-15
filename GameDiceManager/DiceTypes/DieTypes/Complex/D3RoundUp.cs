@@ -22,6 +22,7 @@ namespace DiceTypes.DieTypes.Complex
         public string GetRollHistory()
         {
             var rollResult = base.ReportRollValue();
+
             return $"D6: {rollResult}";
         }
 

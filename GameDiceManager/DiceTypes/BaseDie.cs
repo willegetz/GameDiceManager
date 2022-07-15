@@ -6,8 +6,6 @@ namespace DiceTypes
 {
     public class BaseDie
     {
-        // The base die should be in charge of its own seeding
-
         private int numberOfFaces;
 
         private int _randomSeed;
@@ -16,7 +14,7 @@ namespace DiceTypes
         private int ExclusiveUpperBound { get { return (numberOfFaces + 1) + _rangeShiftValue; } }
         private int InclusiveLowerBound { get { return 1 + _rangeShiftValue; } }
 
-        private int _rollResult;
+        private int? _rollResult = null;
 
         public BaseDie(int numberOfFaces)
         {
@@ -56,7 +54,7 @@ namespace DiceTypes
             _rangeShiftValue = rangeShiftValue;
         }
 
-        public int ReportRollValue()
+        public int? ReportRollValue()
         {
             return _rollResult;
         }
