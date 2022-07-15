@@ -57,5 +57,20 @@ namespace DiceTypeTests.DieTypes.Basic
             var expectedRollResult = 3;
             Assert.AreEqual(expectedRollResult, rollResult);
         }
+
+        [TestMethod]
+        public void Returns4WhenRolledWithSeed13()
+        {
+            var seedValue = 13;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d6 = new D6(mockSeedGenerator.Object);
+            var rollResult = d6.RollDie();
+
+            var expectedRollResult = 4;
+            Assert.AreEqual(expectedRollResult, rollResult);
+        }
     }
 }
