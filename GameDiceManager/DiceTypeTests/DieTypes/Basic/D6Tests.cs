@@ -59,5 +59,21 @@ namespace DiceTypeTests.DieTypes.Basic
             Assert.AreEqual(expectedRollResult, rollResult);
             Assert.AreEqual(expectedRollResult, reportedResult);
         }
+
+        [TestMethod]
+        public void ReportsNoValueIfNotRolled()
+        {
+            var seedValue = 0;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d6 = new D6(mockSeedGenerator.Object);
+            var reportedResult = d6.ReportRollResult();
+
+            var expectedRollResult = "D6: Not Yet Rolled";
+
+            Assert.AreEqual(expectedRollResult, reportedResult);
+        }
     }
 }
