@@ -147,5 +147,24 @@ namespace DiceTypeTests
 
             Assert.AreEqual(expectedRollResult, rollResult);
         }
+
+        [TestMethod]
+        public void D6_ReportsValueRolledWhenAsked()
+        {
+            var numberOfFaces = 6;
+            var seedValue = 13;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d6 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
+            var rollResult = d6.RollDie();
+            var reportedResult = d6.ReportRollValue();
+
+            var expectedResult = 4;
+
+            Assert.AreEqual(expectedResult, rollResult);
+            Assert.AreEqual(expectedResult, reportedResult);
+        }
     }
 }

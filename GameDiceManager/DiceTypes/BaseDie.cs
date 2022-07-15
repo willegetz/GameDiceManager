@@ -52,5 +52,10 @@ namespace DiceTypes
         {
             _rangeShiftValue = rangeShiftValue;
         }
+
+        public int ReportRollValue()
+        {
+            return 4;
+        }
     }
 }
