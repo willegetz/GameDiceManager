@@ -19,6 +19,12 @@ namespace DiceTypes.DieTypes.Complex
             return "D3 Round Up (D6 result / 2 rounded up)";
         }
 
+        public string GetRollHistory()
+        {
+            var rollResult = base.ReportRollValue();
+            return $"D6: {rollResult}";
+        }
+
         public override int RollDie()
         {
             var d6Result = base.RollDie();

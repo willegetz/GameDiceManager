@@ -29,7 +29,7 @@ namespace DiceTypeTests.DieTypes.Complex
         }
 
         [TestMethod]
-        public void Returns2WhenRolled()
+        public void Returns2WhenRolledWithSeed5()
         {
             var randomSeed = 5;
 
@@ -43,6 +43,26 @@ namespace DiceTypeTests.DieTypes.Complex
             var expectedRollResult = 2;
 
             Assert.AreEqual(expectedRollResult, rollResult);
+        }
+
+        [TestMethod]
+        public void D6ResultIs3BeforeCalculatingResultOf2()
+        {
+            var randomSeed = 5;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed())
+                             .Returns(randomSeed);
+
+            var d3 = new D3RoundUp(mockSeedGenerator.Object);
+            var rollResult = d3.RollDie();
+            var dieRollHistory = d3.GetRollHistory();
+
+            var expectedRollResult = 2;
+            var expectedDieRollHistory = "D6: 3";
+
+            Assert.AreEqual(expectedRollResult, rollResult);
+            Assert.AreEqual(expectedDieRollHistory, dieRollHistory);
         }
     }
 }
