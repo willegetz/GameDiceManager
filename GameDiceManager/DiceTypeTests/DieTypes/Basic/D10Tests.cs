@@ -41,7 +41,7 @@ namespace DiceTypeTests.DieTypes.Basic
         }
 
         [TestMethod]
-        public void Returns9WhenRolled()
+        public void Returns9WhenRolledWithSeed4()
         {
             var seedValue = 4;
 
@@ -54,6 +54,24 @@ namespace DiceTypeTests.DieTypes.Basic
             var expectedRollResult = 9;
 
             Assert.AreEqual(expectedRollResult, rollResult);
+        }
+
+        [TestMethod]
+        public void ReportsRollResultOf9AfterDieRollResultsIn9()
+        {
+            var seedValue = 4;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d10 = new D10(mockSeedGenerator.Object);
+            var rollResult = d10.RollDie();
+            var reportedResult = d10.ReportRollValue();
+
+            var expectedRollResult = 9;
+
+            Assert.AreEqual(expectedRollResult, rollResult);
+            Assert.AreEqual(expectedRollResult, reportedResult);
         }
     }
 }
