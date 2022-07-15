@@ -149,7 +149,7 @@ namespace DiceTypeTests
         }
 
         [TestMethod]
-        public void D6_ReportsValueRolledWhenAsked()
+        public void D6_ReportsRollResultOf4AfterDieRollResultsIn4()
         {
             var numberOfFaces = 6;
             var seedValue = 13;
