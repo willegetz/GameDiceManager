@@ -48,7 +48,7 @@ namespace DiceTypeTests
         }
 
         [TestMethod]
-        public void D6_ShiftsRangeByOneWhenToldTo()
+        public void D6_ShiftsRangeUpByOneWhenRangeShiftValueIs1()
         {
             var numberOfFaces = 6;
             var rangeShiftValue = 1;
@@ -59,6 +59,22 @@ namespace DiceTypeTests
             var numbersOnShiftedD6 = shiftedD6.GetFaceNumbers();
 
             var expectedNumbersOnShiftedD6 = "2, 3, 4, 5, 6, 7";
+
+            Assert.AreEqual(expectedNumbersOnShiftedD6, numbersOnShiftedD6);
+        }
+
+        [TestMethod]
+        public void D6_ShiftsRangeDownByOneWhenRangeShiftValueIsNegative1()
+        {
+            var numberOfFaces = 6;
+            var rangeShiftValue = -1;
+
+            var shiftedD6 = new BaseDie(numberOfFaces);
+            shiftedD6.ShiftRange(rangeShiftValue);
+
+            var numbersOnShiftedD6 = shiftedD6.GetFaceNumbers();
+
+            var expectedNumbersOnShiftedD6 = "0, 1, 2, 3, 4, 5";
 
             Assert.AreEqual(expectedNumbersOnShiftedD6, numbersOnShiftedD6);
         }
