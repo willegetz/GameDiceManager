@@ -166,5 +166,24 @@ namespace DiceTypeTests
             Assert.AreEqual(expectedResult, rollResult);
             Assert.AreEqual(expectedResult, reportedResult);
         }
+
+        [TestMethod]
+        public void D8_ReportsRollResultOf7AfterDieRollResultsIn7()
+        {
+            var numberOfFaces = 8;
+            var seedValue = 6;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.Setup(x => x.GetRandomSeed()).Returns(seedValue);
+
+            var d8 = new BaseDie(numberOfFaces, mockSeedGenerator.Object);
+            var rollResult = d8.RollDie();
+            var reportedResult = d8.ReportRollValue();
+
+            var expectedResult = 7;
+
+            Assert.AreEqual(expectedResult, rollResult);
+            Assert.AreEqual(expectedResult, reportedResult);
+        }
     }
 }

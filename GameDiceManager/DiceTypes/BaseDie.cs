@@ -16,6 +16,8 @@ namespace DiceTypes
         private int ExclusiveUpperBound { get { return (numberOfFaces + 1) + _rangeShiftValue; } }
         private int InclusiveLowerBound { get { return 1 + _rangeShiftValue; } }
 
+        private int _rollResult;
+
         public BaseDie(int numberOfFaces)
         {
             this.numberOfFaces = numberOfFaces;
@@ -44,6 +46,7 @@ namespace DiceTypes
         {
             var randomizer = new Random(_randomSeed);
             var result = randomizer.Next(InclusiveLowerBound, ExclusiveUpperBound);
+            _rollResult = result;
 
             return result;
         }
@@ -55,7 +58,7 @@ namespace DiceTypes
 
         public int ReportRollValue()
         {
-            return 4;
+            return _rollResult;
         }
     }
 }
