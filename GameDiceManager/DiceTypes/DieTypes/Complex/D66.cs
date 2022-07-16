@@ -43,5 +43,15 @@ Ones Die: {onesFaces}";
             var result = Convert.ToInt32($"{tensResult}{onesResult}");
             return result;
         }
+
+        public string ReportDiceRolls()
+        {
+            var tensResult = _tensDie.ReportRollResult();
+            var onesResult = _onesDie.ReportRollResult();
+
+            return $@"{GetDieType()} Rolls
+Tens Die Roll: {_tensDie.GetDieType()} rolled {tensResult}
+Ones Die Roll: {_onesDie.GetDieType()} rolled {onesResult}";
+        }
     }
 }

@@ -49,5 +49,29 @@ Ones Die: 1, 2, 3, 4, 5, 6";
 
             Assert.AreEqual(expectedRollResult, rollResult);
         }
+
+        [TestMethod]
+        public void ReportDiceRolls()
+        {
+            var tensSeed = 13;
+            var onesSeed = 1;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.SetupSequence(x => x.GetRandomSeed())
+                             .Returns(tensSeed)
+                             .Returns(onesSeed);
+
+            var d66 = new D66(mockSeedGenerator.Object);
+            var rollResult = d66.RollDie();
+            var reportedDiceRolls = d66.ReportDiceRolls();
+
+            var expectedRollResult = 42;
+            var expectedDiceRollReport = @"D66 (2D6) Rolls
+Tens Die Roll: D6 rolled 4
+Ones Die Roll: D6 rolled 2";
+
+            Assert.AreEqual(expectedRollResult, rollResult);
+            Assert.AreEqual(expectedDiceRollReport, reportedDiceRolls);
+        }
     }
 }
