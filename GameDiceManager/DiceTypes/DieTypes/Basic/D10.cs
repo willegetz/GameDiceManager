@@ -24,5 +24,12 @@ namespace DiceTypes.DieTypes.Basic
             var rangeShiftValue = -1;
             ShiftRange(rangeShiftValue);
         }
+
+        public string ReportRollResult()
+        {
+            var result = base.ReportRollValue();
+
+            return result != null ? result.ToString() : $"{GetDieType()}: Not Yet Rolled";
+        }
     }
 }
