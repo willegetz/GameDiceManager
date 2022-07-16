@@ -73,5 +73,29 @@ D6: 1, 2, 3, 4, 5, 6";
 
             Assert.AreEqual(expectedRollResult, rollResult);
         }
+
+        [TestMethod]
+        public void ReportDiceRolls()
+        {
+            var d8Seed = 13;
+            var d6Seed = 13;
+
+            var mockSeedGenerator = new Mock<ISeedGenerator>();
+            mockSeedGenerator.SetupSequence(x => x.GetRandomSeed())
+                             .Returns(d8Seed)
+                             .Returns(d6Seed);
+
+            var d16 = new D16(mockSeedGenerator.Object);
+            var rollResult = d16.RollDie();
+            var reportedDiceRolls = d16.ReportDiceRolls();
+
+            var expectedRollResult = 13;
+            var expectedDiceRollReport = @"D16 Rolls
+Decision Die Roll: D6 rolled 4
+Value Die Roll: D8 rolled 5";
+
+            Assert.AreEqual(expectedRollResult, rollResult);
+            Assert.AreEqual(expectedDiceRollReport, reportedDiceRolls);
+        }
     }
 }

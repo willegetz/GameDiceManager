@@ -49,5 +49,15 @@ D6: {_d6.GetFaceNumbers()}";
 
             return d16Result;
         }
+
+        public string ReportDiceRolls()
+        {
+            var decisionDie = _d6.ReportRollResult();
+            var valueDie = _d8.ReportRollResult();
+
+            return $@"{GetDieType()} Rolls
+Decision Die Roll: {_d6.GetDieType()} rolled {decisionDie}
+Value Die Roll: {_d8.GetDieType()} rolled {valueDie}";
+        }
     }
 }
