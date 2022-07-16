@@ -19,6 +19,20 @@ namespace DiceTypeTests.DieTypes.Complex
         }
 
         [TestMethod]
+        public void ReturnsDieLogicDescription()
+        {
+            var d3TypeA = new D3RoundUp();
+            var logicDescription = d3TypeA.GetDieLogicDescription();
+
+            var expectedLogicDescription = @"The of the D3 Rounded Up is calculated thusly:
+Step 1) Roll a D6
+Step 2) Divide the result by 2 and round up
+Step 3) The calculated value from step 2 is the final result";
+
+            Assert.AreEqual(expectedLogicDescription, logicDescription);
+        }
+
+        [TestMethod]
         public void ReportsItsFaces()
         {
             var d3TypeA = new D3RoundUp();

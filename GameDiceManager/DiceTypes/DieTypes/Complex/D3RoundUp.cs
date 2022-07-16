@@ -35,5 +35,15 @@ namespace DiceTypes.DieTypes.Complex
 
             return Convert.ToInt32(result);
         }
+
+        public string GetDieLogicDescription()
+        {
+            var logicDescription = @"The of the D3 Rounded Up is calculated thusly:
+Step 1) Roll a D6
+Step 2) Divide the result by 2 and round up
+Step 3) The calculated value from step 2 is the final result";
+
+            return logicDescription;
+        }
     }
 }
