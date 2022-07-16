@@ -59,5 +59,15 @@ D6: {_d6.GetFaceNumbers()}";
 Decision Die Roll: {_d6.GetDieType()} rolled {decisionDie}
 Value Die Roll: {_d8.GetDieType()} rolled {valueDie}";
         }
+
+        public string GetDieLogicDescription()
+        {
+            var logicDescription = @"The result of the D16 is calculated thusly:
+Step 1) Roll a D8
+Step 2) Roll a D6 and consult the result. If the result is 1, 2, or 3 add 0 to the D8 result, otherwise add 8 to the D8 result
+Step 3) The calculated total from Step 2 is the final result";
+
+            return logicDescription;
+        }
     }
 }

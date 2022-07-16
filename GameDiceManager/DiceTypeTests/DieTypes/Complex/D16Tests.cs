@@ -37,6 +37,20 @@ D6: 1, 2, 3, 4, 5, 6";
         }
 
         [TestMethod]
+        public void ReturnsDieLogicDescription()
+        {
+            var d16 = new D16();
+            string logicDescription = d16.GetDieLogicDescription();
+
+            var expectedLogicDescription = @"The result of the D16 is calculated thusly:
+Step 1) Roll a D8
+Step 2) Roll a D6 and consult the result. If the result is 1, 2, or 3 add 0 to the D8 result, otherwise add 8 to the D8 result
+Step 3) The calculated total from Step 2 is the final result";
+
+            Assert.AreEqual(expectedLogicDescription, logicDescription);
+        }
+
+        [TestMethod]
         public void Returns8WhenRolled()
         {
             var d8Seed = 8;
