@@ -17,5 +17,12 @@ namespace DiceTypes.DieTypes.Basic
         {
             return "D20";
         }
+
+        public string ReportRollResult()
+        {
+            var result = base.ReportRollValue();
+
+            return result != null ? result.ToString() : $"{GetDieType()}: Not Yet Rolled";
+        }
     }
 }
