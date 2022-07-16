@@ -40,7 +40,7 @@ D6: 1, 2, 3, 4, 5, 6";
         public void ReturnsDieLogicDescription()
         {
             var d16 = new D16();
-            string logicDescription = d16.GetDieLogicDescription();
+            var logicDescription = d16.GetDieLogicDescription();
 
             var expectedLogicDescription = @"The result of the D16 is calculated thusly:
 Step 1) Roll a D8

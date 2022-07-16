@@ -44,6 +44,16 @@ Ones Die: {onesFaces}";
             return result;
         }
 
+        public string GetDieLogicDescription()
+        {
+            var logicDescription = @"The result of the D66 is calculated thusly:
+Step 1) Roll a D6 and use the result for the tens value
+Step 2) Roll a D6 and use the result for the ones value
+Step 3) The combined values are the final result";
+
+            return logicDescription;
+        }
+
         public string ReportDiceRolls()
         {
             var tensResult = _tensDie.ReportRollResult();

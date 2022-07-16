@@ -32,6 +32,20 @@ Ones Die: 1, 2, 3, 4, 5, 6";
         }
 
         [TestMethod]
+        public void ReturnsDieLogicDescription()
+        {
+            var d66 = new D66();
+            var logicDescription = d66.GetDieLogicDescription();
+
+            var expectedLogicDescription = @"The result of the D66 is calculated thusly:
+Step 1) Roll a D6 and use the result for the tens value
+Step 2) Roll a D6 and use the result for the ones value
+Step 3) The combined values are the final result";
+
+            Assert.AreEqual(expectedLogicDescription, logicDescription);
+        }
+
+        [TestMethod]
         public void Returns42WhenRolled()
         {
             var tensSeed = 13;
